@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<database_config>
+    <dbdriver>com.mysql.cj.jdbc.Driver</dbdriver>
+    <dburl>jdbc:mysql://localhost:3306/inventory_store</dburl>
+    <username>pragya.saxena</username>
+    <password>capsys@123</password>
+    
+</database_config>
