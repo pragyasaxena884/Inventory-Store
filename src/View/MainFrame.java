@@ -1228,8 +1228,7 @@ public class MainFrame extends javax.swing.JFrame
             if(rs>0)
             {JOptionPane.showMessageDialog(ModProductPanel,"Product Updated");}
             else
-            {JOptionPane.showMessageDialog(ModProductPanel,"Product not updated");}
-            }
+            {JOptionPane.showMessageDialog(ModProductPanel,"Product not updated");}}
         catch(Exception e)
         {System.out.println(e);}
     }//GEN-LAST:event_modifyActionPerformed
@@ -1249,15 +1248,12 @@ public class MainFrame extends javax.swing.JFrame
 
     private void usernameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_usernameFocusLost
         if(username.getText().isEmpty())
-        {
-            username.setText("Enter Username");
-        }
+        { username.setText("Enter Username"); }
     }//GEN-LAST:event_usernameFocusLost
 
     private void passwordFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordFocusLost
         if(password.getText().isEmpty())
-        {
-            password.setEchoChar((char)0);
+        {   password.setEchoChar((char)0);
             password.setText("Enter Password");   
         }
     }//GEN-LAST:event_passwordFocusLost
@@ -1275,11 +1271,12 @@ public class MainFrame extends javax.swing.JFrame
         DefaultTableModel model = new DefaultTableModel(new String[]{"Product ID", "Product Name", "Cost" , "Stock" ,"Purchase Date"}, 0);
         try{   
             PreparedStatement preparedStat=con.prepareCall("select * from product_details where purchase_date BETWEEN ? and ?");
-            SimpleDateFormat sdf=new SimpleDateFormat("yyyy-mm-dd");
-            String d1=sdf.format(startDate);
-            String d2=sdf.format(endDate);
-            preparedStat.setString(1,d1);
-            preparedStat.setString(2,d2);
+            java.util.Date d = new java.util.Date();  
+            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-mm-dd");  
+            String strDate= formatter.format(d);  
+           
+            //preparedStat.setDate(1,startDa);
+            //preparedStat.setDate(2,d2);
             
             ResultSet rs=preparedStat.executeQuery();
             while(rs.next())
@@ -1333,6 +1330,7 @@ public class MainFrame extends javax.swing.JFrame
         java.util.Date today=new java.util.Date();
         return new java.sql.Date(today.getTime());
     }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AddProductPanel;
     private javax.swing.JPanel DateBasedReportPanel;
