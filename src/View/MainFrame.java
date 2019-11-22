@@ -2,11 +2,11 @@ package View;
 import UtilityPackage.*;
 import java.awt.Color;
 import java.sql.Connection;
-import java.sql.Date;
+//import java.sql.Date;
+import java.util.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLIntegrityConstraintViolationException;
-import java.text.SimpleDateFormat;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -20,7 +20,8 @@ public class MainFrame extends javax.swing.JFrame
     {
         initComponents();
     }
-
+    int available_stock=0;
+    
     public void switchPanel(JPanel panel)
     {
       layeredPane.removeAll();
@@ -28,7 +29,11 @@ public class MainFrame extends javax.swing.JFrame
       layeredPane.repaint();
       layeredPane.revalidate();
     }
-    
+      private static java.sql.Date getCurrentDate() 
+    {
+        java.util.Date today=new java.util.Date();
+        return new java.sql.Date(today.getTime());
+    }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -40,32 +45,33 @@ public class MainFrame extends javax.swing.JFrame
         login = new javax.swing.JButton();
         password = new javax.swing.JPasswordField();
         username = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jLabel24 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
-        jLabel27 = new javax.swing.JLabel();
+        inventory_store = new javax.swing.JLabel();
+        pass_image = new javax.swing.JLabel();
+        user_image = new javax.swing.JLabel();
+        authorization = new javax.swing.JLabel();
+        login_label = new javax.swing.JLabel();
+        pass_label = new javax.swing.JLabel();
+        forgot_password = new javax.swing.JLabel();
         welcomePanel = new javax.swing.JPanel();
         manipulateProduct = new javax.swing.JButton();
         manageQuantity = new javax.swing.JButton();
         productReporting = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
+        welcome_window = new javax.swing.JLabel();
         ProductDetailsPanel = new javax.swing.JPanel();
         addProduct = new javax.swing.JButton();
         delProduct = new javax.swing.JButton();
         modProduct = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
+        manipulate_product = new javax.swing.JLabel();
         ProductQuantityPanel = new javax.swing.JPanel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
+        productId_label = new javax.swing.JLabel();
+        quantity_label = new javax.swing.JLabel();
+        p_id = new javax.swing.JTextField();
+        quantity1 = new javax.swing.JTextField();
         addQuantity = new javax.swing.JButton();
         removeQuantity = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        back_button1 = new javax.swing.JButton();
+        message = new javax.swing.JLabel();
         ProductReportingPanel = new javax.swing.JPanel();
         monthly_report = new javax.swing.JButton();
         report_date_based = new javax.swing.JButton();
@@ -108,17 +114,18 @@ public class MainFrame extends javax.swing.JFrame
         jLabel20 = new javax.swing.JLabel();
         DateBasedReportPanel = new javax.swing.JPanel();
         generateReport3 = new javax.swing.JButton();
-        jTextField2 = new javax.swing.JTextField();
+        p_id6 = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        startDate = new datechooser.beans.DateChooserCombo();
-        endDate = new datechooser.beans.DateChooserCombo();
         jLabel18 = new javax.swing.JLabel();
+        startDate = new com.toedter.calendar.JDateChooser();
+        endDate = new com.toedter.calendar.JDateChooser();
         reportPanel = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         table = new javax.swing.JTable();
         jLabel19 = new javax.swing.JLabel();
+        message1 = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
         home = new javax.swing.JLabel();
 
@@ -188,45 +195,42 @@ public class MainFrame extends javax.swing.JFrame
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 30)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Inventory_Store");
+        inventory_store.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 30)); // NOI18N
+        inventory_store.setForeground(new java.awt.Color(255, 255, 255));
+        inventory_store.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        inventory_store.setText("Inventory_Store");
 
-        jLabel21.setIcon(new javax.swing.ImageIcon("C:\\Users\\Pragya\\Desktop\\icons\\password_32px.png")); // NOI18N
+        pass_image.setIcon(new javax.swing.ImageIcon("C:\\Users\\Pragya\\Desktop\\icons\\password_32px.png")); // NOI18N
 
-        jLabel22.setIcon(new javax.swing.ImageIcon("C:\\Users\\Pragya\\Desktop\\icons\\administrator_male_26px.png")); // NOI18N
+        user_image.setIcon(new javax.swing.ImageIcon("C:\\Users\\Pragya\\Desktop\\icons\\administrator_male_26px.png")); // NOI18N
 
-        jLabel23.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 18)); // NOI18N
-        jLabel23.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel23.setText("Authorization");
+        authorization.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 18)); // NOI18N
+        authorization.setForeground(new java.awt.Color(255, 255, 255));
+        authorization.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        authorization.setText("Authorization");
 
-        jLabel24.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
-        jLabel24.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel24.setText("Login");
+        login_label.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
+        login_label.setForeground(new java.awt.Color(255, 255, 255));
+        login_label.setText("Login");
 
-        jLabel25.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
-        jLabel25.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel25.setText("Password");
+        pass_label.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
+        pass_label.setForeground(new java.awt.Color(255, 255, 255));
+        pass_label.setText("Password");
 
-        jLabel27.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 14)); // NOI18N
-        jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel27.setText("FORGOT PASSWORD?");
+        forgot_password.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 14)); // NOI18N
+        forgot_password.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        forgot_password.setText("FORGOT PASSWORD?");
 
         javax.swing.GroupLayout loginPanelLayout = new javax.swing.GroupLayout(loginPanel);
         loginPanel.setLayout(loginPanelLayout);
         loginPanelLayout.setHorizontalGroup(
             loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(authorization, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, loginPanelLayout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 528, Short.MAX_VALUE))
-            .addComponent(jLabel23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, loginPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(85, Short.MAX_VALUE)
                 .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel25)
-                    .addComponent(jLabel24)
+                    .addComponent(pass_label)
+                    .addComponent(login_label)
                     .addComponent(login, javax.swing.GroupLayout.PREFERRED_SIZE, 384, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(loginPanelLayout.createSequentialGroup()
                         .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -234,35 +238,36 @@ public class MainFrame extends javax.swing.JFrame
                             .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(pass_image, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(user_image, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(loginPanelLayout.createSequentialGroup()
                         .addGap(88, 88, 88)
-                        .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(forgot_password, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(81, 81, 81))
+            .addComponent(inventory_store, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         loginPanelLayout.setVerticalGroup(
             loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, loginPanelLayout.createSequentialGroup()
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(inventory_store, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35)
-                .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(authorization, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(52, 52, 52)
-                .addComponent(jLabel24)
+                .addComponent(login_label)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(user_image, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(username, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34)
-                .addComponent(jLabel25)
+                .addComponent(pass_label)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pass_image, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(41, 41, 41)
                 .addComponent(login, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel27)
+                .addComponent(forgot_password)
                 .addContainerGap(166, Short.MAX_VALUE))
         );
 
@@ -313,16 +318,16 @@ public class MainFrame extends javax.swing.JFrame
             }
         });
 
-        jLabel5.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 24)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("Welcome Window");
+        welcome_window.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 24)); // NOI18N
+        welcome_window.setForeground(new java.awt.Color(255, 255, 255));
+        welcome_window.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        welcome_window.setText("Welcome Window");
 
         javax.swing.GroupLayout welcomePanelLayout = new javax.swing.GroupLayout(welcomePanel);
         welcomePanel.setLayout(welcomePanelLayout);
         welcomePanelLayout.setHorizontalGroup(
             welcomePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(welcome_window, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, welcomePanelLayout.createSequentialGroup()
                 .addContainerGap(184, Short.MAX_VALUE)
                 .addGroup(welcomePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -335,7 +340,7 @@ public class MainFrame extends javax.swing.JFrame
             welcomePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, welcomePanelLayout.createSequentialGroup()
                 .addGap(0, 0, 0)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(welcome_window, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(110, 110, 110)
                 .addComponent(manipulateProduct, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(38, 38, 38)
@@ -379,16 +384,16 @@ public class MainFrame extends javax.swing.JFrame
             }
         });
 
-        jLabel6.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 24)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("Manipulate Product Details");
+        manipulate_product.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 24)); // NOI18N
+        manipulate_product.setForeground(new java.awt.Color(255, 255, 255));
+        manipulate_product.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        manipulate_product.setText("Manipulate Product Details");
 
         javax.swing.GroupLayout ProductDetailsPanelLayout = new javax.swing.GroupLayout(ProductDetailsPanel);
         ProductDetailsPanel.setLayout(ProductDetailsPanelLayout);
         ProductDetailsPanelLayout.setHorizontalGroup(
             ProductDetailsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(manipulate_product, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(ProductDetailsPanelLayout.createSequentialGroup()
                 .addGap(150, 150, 150)
                 .addGroup(ProductDetailsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -400,7 +405,7 @@ public class MainFrame extends javax.swing.JFrame
         ProductDetailsPanelLayout.setVerticalGroup(
             ProductDetailsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ProductDetailsPanelLayout.createSequentialGroup()
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(manipulate_product, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34)
                 .addComponent(addProduct, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20)
@@ -414,38 +419,56 @@ public class MainFrame extends javax.swing.JFrame
 
         ProductQuantityPanel.setBackground(new java.awt.Color(35, 144, 173));
 
-        jLabel10.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("Product ID");
+        productId_label.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
+        productId_label.setForeground(new java.awt.Color(255, 255, 255));
+        productId_label.setText("Product ID");
 
-        jLabel11.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("Product Name");
+        quantity_label.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
+        quantity_label.setForeground(new java.awt.Color(255, 255, 255));
+        quantity_label.setText("Quantity");
 
-        jTextField1.setBackground(new java.awt.Color(35, 144, 173));
-        jTextField1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
+        p_id.setBackground(new java.awt.Color(35, 144, 173));
+        p_id.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
+        p_id.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                p_idFocusLost(evt);
+            }
+        });
 
-        jTextField3.setBackground(new java.awt.Color(35, 144, 173));
-        jTextField3.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
+        quantity1.setBackground(new java.awt.Color(35, 144, 173));
+        quantity1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
 
         addQuantity.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 24)); // NOI18N
         addQuantity.setText("Add");
+        addQuantity.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addQuantityActionPerformed(evt);
+            }
+        });
 
         removeQuantity.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 24)); // NOI18N
         removeQuantity.setText("Remove");
+        removeQuantity.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removeQuantityActionPerformed(evt);
+            }
+        });
 
         jLabel12.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 24)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel12.setText("Manage Product Quantity");
 
-        jButton1.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 24)); // NOI18N
-        jButton1.setText("Back");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        back_button1.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 24)); // NOI18N
+        back_button1.setText("Back");
+        back_button1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                back_button1ActionPerformed(evt);
             }
         });
+
+        message.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
+        message.setForeground(new java.awt.Color(225, 21, 21));
 
         javax.swing.GroupLayout ProductQuantityPanelLayout = new javax.swing.GroupLayout(ProductQuantityPanel);
         ProductQuantityPanel.setLayout(ProductQuantityPanelLayout);
@@ -455,13 +478,15 @@ public class MainFrame extends javax.swing.JFrame
             .addGroup(ProductQuantityPanelLayout.createSequentialGroup()
                 .addGap(74, 74, 74)
                 .addGroup(ProductQuantityPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE)
-                    .addComponent(addQuantity, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel10)
-                    .addComponent(jLabel11)
-                    .addComponent(removeQuantity, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE)
-                    .addComponent(jTextField1)
-                    .addComponent(jTextField3))
+                    .addComponent(message, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE)
+                    .addGroup(ProductQuantityPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(back_button1, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE)
+                        .addComponent(addQuantity, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(productId_label)
+                        .addComponent(quantity_label)
+                        .addComponent(removeQuantity, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE)
+                        .addComponent(p_id)
+                        .addComponent(quantity1)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         ProductQuantityPanelLayout.setVerticalGroup(
@@ -469,19 +494,21 @@ public class MainFrame extends javax.swing.JFrame
             .addGroup(ProductQuantityPanelLayout.createSequentialGroup()
                 .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(44, 44, 44)
-                .addComponent(jLabel10)
+                .addComponent(productId_label)
                 .addGap(10, 10, 10)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(jLabel11)
+                .addComponent(p_id, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(message, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addComponent(quantity_label)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(60, 60, 60)
+                .addComponent(quantity1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(addQuantity)
                 .addGap(33, 33, 33)
                 .addComponent(removeQuantity)
                 .addGap(30, 30, 30)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(back_button1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(127, Short.MAX_VALUE))
         );
 
@@ -877,8 +904,8 @@ public class MainFrame extends javax.swing.JFrame
             }
         });
 
-        jTextField2.setBackground(new java.awt.Color(35, 144, 173));
-        jTextField2.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
+        p_id6.setBackground(new java.awt.Color(35, 144, 173));
+        p_id6.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
 
         jLabel7.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
@@ -892,18 +919,12 @@ public class MainFrame extends javax.swing.JFrame
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Product ID");
 
-        startDate.setCalendarBackground(new java.awt.Color(35, 144, 173));
-        startDate.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
-        startDate.setFieldFont(new java.awt.Font("Leelawadee UI Semilight", java.awt.Font.PLAIN, 12));
-
-        endDate.setCalendarBackground(new java.awt.Color(35, 144, 173));
-        endDate.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
-        endDate.setFieldFont(new java.awt.Font("Leelawadee UI Semilight", java.awt.Font.PLAIN, 12));
-
         jLabel18.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 24)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(255, 255, 255));
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel18.setText("Report Date Based");
+
+        startDate.setDateFormatString("dd-MM-yyyy");
 
         javax.swing.GroupLayout DateBasedReportPanelLayout = new javax.swing.GroupLayout(DateBasedReportPanel);
         DateBasedReportPanel.setLayout(DateBasedReportPanelLayout);
@@ -913,15 +934,17 @@ public class MainFrame extends javax.swing.JFrame
                 .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 526, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DateBasedReportPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(40, Short.MAX_VALUE)
                 .addGroup(DateBasedReportPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(generateReport3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField2)
+                    .addComponent(p_id6)
+                    .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 474, Short.MAX_VALUE)
                     .addComponent(startDate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(endDate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 474, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(DateBasedReportPanelLayout.createSequentialGroup()
+                        .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(204, 204, 204))
+                    .addComponent(endDate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(22, 22, 22))
         );
         DateBasedReportPanelLayout.setVerticalGroup(
@@ -931,16 +954,16 @@ public class MainFrame extends javax.swing.JFrame
                 .addGap(36, 36, 36)
                 .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(p_id6, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
+                .addGap(3, 3, 3)
                 .addComponent(startDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addGap(37, 37, 37)
                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(endDate, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(74, 74, 74)
+                .addGap(13, 13, 13)
+                .addComponent(endDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(73, 73, 73)
                 .addComponent(generateReport3, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(176, 176, 176))
         );
@@ -983,23 +1006,30 @@ public class MainFrame extends javax.swing.JFrame
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel19.setText("Report Table");
 
+        message1.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
+        message1.setForeground(new java.awt.Color(255, 255, 255));
+
         javax.swing.GroupLayout reportPanelLayout = new javax.swing.GroupLayout(reportPanel);
         reportPanel.setLayout(reportPanelLayout);
         reportPanelLayout.setHorizontalGroup(
             reportPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, 558, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, reportPanelLayout.createSequentialGroup()
-                .addContainerGap(68, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28))
-            .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(reportPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(message1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 525, Short.MAX_VALUE))
+                .addContainerGap())
         );
         reportPanelLayout.setVerticalGroup(
             reportPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, reportPanelLayout.createSequentialGroup()
                 .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(428, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(message1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(310, Short.MAX_VALUE))
         );
 
         layeredPane.add(reportPanel, "card13");
@@ -1123,7 +1153,9 @@ public class MainFrame extends javax.swing.JFrame
         Validation v=new Validation();
         int rs=0;
         try{
-            PreparedStatement preparedStat=con.prepareCall("insert into product_details values(?,?,?,?,?)");
+            PreparedStatement preparedStat=con.prepareCall("insert into product_details values(?,?,?,?)");
+            PreparedStatement preparedStat1=con.prepareCall("insert into quantity(quantity_remove,p_id) values(?,?)");
+            
             if(v.checkLen(Long.parseLong(product_id.getText()))==true)
             {
             preparedStat.setString(1, product_id.getText());
@@ -1131,10 +1163,13 @@ public class MainFrame extends javax.swing.JFrame
             preparedStat.setString(2, product_name.getText());
 
             preparedStat.setString(3, cost.getText());
-
-            preparedStat.setString(4, quant.getText());
             
-            preparedStat.setDate(5,getCurrentDate());
+            preparedStat.setDate(4,getCurrentDate());
+            
+            preparedStat1.setInt(1, Integer.parseInt(quant.getText()));
+            preparedStat1.setInt(2, Integer.parseInt(product_id.getText()));
+            
+            
 
             rs=preparedStat.executeUpdate();
             
@@ -1262,37 +1297,112 @@ public class MainFrame extends javax.swing.JFrame
         System.exit(0);
     }//GEN-LAST:event_jLabel29MouseClicked
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void back_button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back_button1ActionPerformed
+        p_id.setText("");
+        quantity1.setText("");
+        
         switchPanel(welcomePanel);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_back_button1ActionPerformed
 
     private void generateReport3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generateReport3ActionPerformed
         Connection con=new DBAccess().getCon();
         DefaultTableModel model = new DefaultTableModel(new String[]{"Product ID", "Product Name", "Cost" , "Stock" ,"Purchase Date"}, 0);
         try{   
-            PreparedStatement preparedStat=con.prepareCall("select * from product_details where purchase_date BETWEEN ? and ?");
-            java.util.Date d = new java.util.Date();  
-            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-mm-dd");  
-            String strDate= formatter.format(d);  
-           
-            //preparedStat.setDate(1,startDa);
-            //preparedStat.setDate(2,d2);
+            PreparedStatement preparedStat=con.prepareStatement("select DISTINCT product_id,product_name,cost,purchase_date,quantity_remove from product_details Inner join quantity where purchase_date BETWEEN ? and ? AND product_id=?");
             
+            preparedStat.setDate(1, new java.sql.Date(startDate.getDate().getTime()));
+            preparedStat.setDate(2, new java.sql.Date(endDate.getDate().getTime()));
+            preparedStat.setInt(3,Integer.parseInt(p_id6.getText()));
             ResultSet rs=preparedStat.executeQuery();
             while(rs.next())
             {
                 String p_id=rs.getString("product_id");
                 String p_name=rs.getString("product_name");
                 float c=rs.getFloat("cost");
-                int q=rs.getInt("quantity");
+                int q=rs.getInt("quantity_remove");
                 Date date=rs.getDate("purchase_date");
                 model.addRow(new Object[]{p_id,p_name,c,q,date});
             }
-            table.setModel(model);}
+            table.setModel(model);
+            message1.setText("Available Stock:" + available_stock);
+        }
+        
         catch(Exception e)
         {System.out.println(e);}
         switchPanel(reportPanel);
     }//GEN-LAST:event_generateReport3ActionPerformed
+
+    private void addQuantityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addQuantityActionPerformed
+        Connection con=new DBAccess().getCon();
+        
+        
+        try{   
+            PreparedStatement preparedStat=con.prepareStatement("insert into quantity values(?,?)");
+            
+            
+            preparedStat.setLong(2,Long.parseLong(p_id.getText()));
+            preparedStat.setInt(1,Integer.parseInt(quantity1.getText()));
+            int rs=preparedStat.executeUpdate();
+            if(rs>0)
+            {
+                JOptionPane.showMessageDialog(ProductQuantityPanel,"Quantity Updated");
+            }
+            
+            
+       }
+        
+        catch(Exception e)
+        {System.out.println(e);}
+    }//GEN-LAST:event_addQuantityActionPerformed
+
+    private void p_idFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_p_idFocusLost
+        Validation val=new Validation();
+        if(val.existID(Long.parseLong(p_id.getText()))==false)
+        {
+            message.setText("Product_Id not exist");
+            addQuantity.setEnabled(false);
+        }
+        else
+        {
+            message.setText(" ");
+            addQuantity.setEnabled(true);   
+        }
+        
+    }//GEN-LAST:event_p_idFocusLost
+
+    private void removeQuantityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeQuantityActionPerformed
+       Connection con=new DBAccess().getCon();
+       int i=1; int sum=0;
+     
+        try{   
+            PreparedStatement preparedStat=con.prepareStatement("select quantity_remove from quantity");
+            PreparedStatement preparedStat1=con.prepareStatement("insert into quantity(available_stock) values(?)");
+            ResultSet rs=preparedStat.executeQuery();
+            while(rs.next())
+            {sum+=rs.getInt(i);}i++;   
+            System.out.println(sum);
+            int n=Integer.parseInt(quantity1.getText());
+            if(n<=sum)
+            {
+            available_stock=sum-n;
+            preparedStat1.setInt(1, available_stock);
+            int result_set=preparedStat1.executeUpdate();
+            System.out.println(available_stock);
+            }
+            else
+            {
+            JOptionPane.showMessageDialog(ProductQuantityPanel,"Not enough Quantity");
+            }
+          
+           
+            
+            
+            
+       }
+        
+        catch(Exception e)
+        {System.out.println(e);}
+    }//GEN-LAST:event_removeQuantityActionPerformed
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -1323,13 +1433,9 @@ public class MainFrame extends javax.swing.JFrame
             public void run() {
                 new MainFrame().setVisible(true);
             }
-        });
+        });       
     }
-    private static java.sql.Date getCurrentDate() 
-    {
-        java.util.Date today=new java.util.Date();
-        return new java.sql.Date(today.getTime());
-    }
+  
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AddProductPanel;
@@ -1345,13 +1451,16 @@ public class MainFrame extends javax.swing.JFrame
     private javax.swing.JButton add;
     private javax.swing.JButton addProduct;
     private javax.swing.JButton addQuantity;
+    private javax.swing.JLabel authorization;
+    private javax.swing.JButton back_button1;
     private javax.swing.JTextField cost;
     private javax.swing.JTextField cost1;
     private javax.swing.JLabel cpu;
     private javax.swing.JLabel cpu1;
     private javax.swing.JButton delProduct;
     private javax.swing.JButton delete;
-    private datechooser.beans.DateChooserCombo endDate;
+    private com.toedter.calendar.JDateChooser endDate;
+    private javax.swing.JLabel forgot_password;
     private javax.swing.JButton generateReport1;
     private javax.swing.JButton generateReport2;
     private javax.swing.JButton generateReport3;
@@ -1360,9 +1469,7 @@ public class MainFrame extends javax.swing.JFrame
     private javax.swing.JLabel id2;
     private javax.swing.JLabel id3;
     private javax.swing.JLabel id4;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel inventory_store;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
@@ -1373,52 +1480,53 @@ public class MainFrame extends javax.swing.JFrame
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JLayeredPane layeredPane;
     private javax.swing.JButton login;
     private javax.swing.JPanel loginPanel;
+    private javax.swing.JLabel login_label;
     private javax.swing.JButton manageQuantity;
     private javax.swing.JButton manipulateProduct;
+    private javax.swing.JLabel manipulate_product;
+    private javax.swing.JLabel message;
+    private javax.swing.JLabel message1;
     private javax.swing.JButton modProduct;
     private javax.swing.JButton modify;
     private javax.swing.JButton monthly_report;
     private javax.swing.JLabel name;
     private javax.swing.JOptionPane optionPane;
     private javax.swing.JButton overall_report;
+    private javax.swing.JTextField p_id;
     private javax.swing.JTextField p_id1;
     private javax.swing.JTextField p_id2;
     private javax.swing.JTextField p_id4;
     private javax.swing.JTextField p_id5;
+    private javax.swing.JTextField p_id6;
     private javax.swing.JTextField p_name;
+    private javax.swing.JLabel pass_image;
+    private javax.swing.JLabel pass_label;
     private javax.swing.JPasswordField password;
+    private javax.swing.JLabel productId_label;
     private javax.swing.JButton productReporting;
     private javax.swing.JTextField product_id;
     private javax.swing.JTextField product_name;
     private javax.swing.JTextField quant;
     private javax.swing.JLabel quantity;
+    private javax.swing.JTextField quantity1;
+    private javax.swing.JLabel quantity_label;
     private javax.swing.JButton removeQuantity;
     private javax.swing.JPanel reportPanel;
     private javax.swing.JButton report_date_based;
-    private datechooser.beans.DateChooserCombo startDate;
+    private com.toedter.calendar.JDateChooser startDate;
     private javax.swing.JTable table;
+    private javax.swing.JLabel user_image;
     private javax.swing.JTextField username;
     private javax.swing.JPanel welcomePanel;
+    private javax.swing.JLabel welcome_window;
     // End of variables declaration//GEN-END:variables
 }
