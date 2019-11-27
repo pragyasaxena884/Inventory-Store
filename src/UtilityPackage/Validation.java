@@ -1,9 +1,16 @@
 
 package UtilityPackage;
 
+import Controller.DBSum;
+import com.capsys.Inventory.pojo.ProductDetails;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.Date;
+import java.util.List;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
 
 public class Validation 
 {
@@ -52,7 +59,24 @@ public class Validation
         return flag;
     }
  
+    public static boolean isEmptyString(String data){
+        if (data!=null && data.isEmpty()) 
+            return true ;
+        else
+            return false;
+    }
+    
+    /**
+     * Use to validate Main frame entry data
+     **/
+    public static void promptValidationMsg(JPanel panelName, String msg){
+        JOptionPane.showMessageDialog(panelName,"Enter 10-digit product ID");
+    }
     
     
+    public static void validateMainFrameEntry(JPanel panelName, List fieldValue){
+        JOptionPane.showMessageDialog(panelName,"Enter 10-digit product ID");
+    }
     
+     
 }
