@@ -76,19 +76,16 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="layeredPane" min="-2" pref="459" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="home" min="-2" max="-2" attributes="0"/>
+                      <Component id="layeredPane" max="32767" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Component id="homeDefaultPanelLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jLabel1" min="-2" pref="24" max="-2" attributes="0"/>
+                          <Component id="minimizeDefaultPanelLabel" min="-2" pref="24" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel29" min="-2" max="-2" attributes="0"/>
+                          <Component id="exitDefaultPanelLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -96,9 +93,9 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="home" min="-2" pref="30" max="-2" attributes="0"/>
-                      <Component id="jLabel29" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="homeDefaultPanelLabel" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="exitDefaultPanelLabel" min="-2" max="-2" attributes="0"/>
+                      <Component id="minimizeDefaultPanelLabel" min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   <Component id="layeredPane" min="-2" pref="622" max="-2" attributes="0"/>
@@ -126,28 +123,28 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="authorization" alignment="0" max="32767" attributes="0"/>
-                      <Component id="inventory_store" alignment="1" pref="459" max="32767" attributes="0"/>
+                      <Component id="authorizationLabel" alignment="0" max="32767" attributes="0"/>
+                      <Component id="inventoryStoreLabel" alignment="1" pref="469" max="32767" attributes="0"/>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="pass_label" min="-2" max="-2" attributes="0"/>
-                              <Component id="login_label" min="-2" max="-2" attributes="0"/>
-                              <Component id="login" alignment="0" min="-2" pref="384" max="-2" attributes="0"/>
+                              <Component id="passwordLabel" min="-2" max="-2" attributes="0"/>
+                              <Component id="loginLabel" min="-2" max="-2" attributes="0"/>
+                              <Component id="loginButton" alignment="0" min="-2" pref="384" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="username" alignment="1" min="-2" pref="348" max="-2" attributes="0"/>
-                                      <Component id="password" alignment="1" min="-2" pref="348" max="-2" attributes="0"/>
+                                      <Component id="usernameTextField" alignment="1" min="-2" pref="348" max="-2" attributes="0"/>
+                                      <Component id="passwordTextField" alignment="1" min="-2" pref="348" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="pass_image" max="32767" attributes="0"/>
-                                      <Component id="user_image" min="-2" pref="40" max="-2" attributes="0"/>
+                                      <Component id="passwordImageLabel" max="32767" attributes="0"/>
+                                      <Component id="usernameImageLabel" min="-2" pref="40" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
-                                  <Component id="forgot_password" min="-2" pref="210" max="-2" attributes="0"/>
+                                  <Component id="forgotPasswordLabel" min="-2" pref="210" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
@@ -157,34 +154,34 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="inventory_store" min="-2" pref="66" max="-2" attributes="0"/>
+                          <Component id="inventoryStoreLabel" min="-2" pref="66" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                          <Component id="authorization" min="-2" pref="30" max="-2" attributes="0"/>
+                          <Component id="authorizationLabel" min="-2" pref="30" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                          <Component id="login_label" min="-2" max="-2" attributes="0"/>
+                          <Component id="loginLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="user_image" max="32767" attributes="0"/>
-                              <Component id="username" min="-2" pref="35" max="-2" attributes="0"/>
+                              <Component id="usernameImageLabel" max="32767" attributes="0"/>
+                              <Component id="usernameTextField" min="-2" pref="35" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                          <Component id="pass_label" min="-2" max="-2" attributes="0"/>
+                          <Component id="passwordLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="pass_image" max="32767" attributes="0"/>
-                              <Component id="password" min="-2" pref="35" max="-2" attributes="0"/>
+                              <Component id="passwordImageLabel" max="32767" attributes="0"/>
+                              <Component id="passwordTextField" min="-2" pref="35" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                          <Component id="login" min="-2" pref="58" max="-2" attributes="0"/>
+                          <Component id="loginButton" min="-2" pref="58" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="forgot_password" min="-2" max="-2" attributes="0"/>
+                          <Component id="forgotPasswordLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace pref="193" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JButton" name="login">
+                <Component class="javax.swing.JButton" name="loginButton">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -195,12 +192,12 @@
                     <Property name="text" type="java.lang.String" value="Sign In"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="loginMouseEntered"/>
-                    <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="loginMouseExited"/>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="loginActionPerformed"/>
+                    <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="loginButtonMouseEntered"/>
+                    <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="loginButtonMouseExited"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="loginButtonActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JPasswordField" name="password">
+                <Component class="javax.swing.JPasswordField" name="passwordTextField">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ad" green="90" red="23" type="rgb"/>
@@ -217,11 +214,11 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="passwordFocusGained"/>
-                    <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="passwordFocusLost"/>
+                    <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="passwordTextFieldFocusGained"/>
+                    <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="passwordTextFieldFocusLost"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="username">
+                <Component class="javax.swing.JTextField" name="usernameTextField">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ad" green="90" red="23" type="rgb"/>
@@ -237,11 +234,11 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="usernameFocusGained"/>
-                    <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="usernameFocusLost"/>
+                    <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="usernameTextFieldFocusGained"/>
+                    <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="usernameTextFieldFocusLost"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="inventory_store">
+                <Component class="javax.swing.JLabel" name="inventoryStoreLabel">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="30" style="0"/>
@@ -253,21 +250,21 @@
                     <Property name="text" type="java.lang.String" value="Inventory Store"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="pass_image">
+                <Component class="javax.swing.JLabel" name="passwordImageLabel">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="2" name="C:\Users\Pragya\Desktop\icons\password_32px.png"/>
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="user_image">
+                <Component class="javax.swing.JLabel" name="usernameImageLabel">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="2" name="C:\Users\Pragya\Desktop\icons\administrator_male_26px.png"/>
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="authorization">
+                <Component class="javax.swing.JLabel" name="authorizationLabel">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="18" style="1"/>
@@ -279,7 +276,7 @@
                     <Property name="text" type="java.lang.String" value="Authorization"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="login_label">
+                <Component class="javax.swing.JLabel" name="loginLabel">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="12" style="0"/>
@@ -290,7 +287,7 @@
                     <Property name="text" type="java.lang.String" value="Login"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="pass_label">
+                <Component class="javax.swing.JLabel" name="passwordLabel">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="12" style="0"/>
@@ -301,7 +298,7 @@
                     <Property name="text" type="java.lang.String" value="Password"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="forgot_password">
+                <Component class="javax.swing.JLabel" name="forgotPasswordLabel">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="14" style="0"/>
@@ -310,7 +307,7 @@
                     <Property name="text" type="java.lang.String" value="FORGOT PASSWORD?"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="forgot_passwordMouseClicked"/>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="forgotPasswordLabelMouseClicked"/>
                   </Events>
                 </Component>
               </SubComponents>
@@ -330,15 +327,18 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="welcome_window" alignment="0" pref="459" max="32767" attributes="0"/>
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="welcomeWindowLabel" min="-2" pref="457" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="12" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="113" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="productReporting" alignment="0" max="32767" attributes="0"/>
-                              <Component id="manipulateProduct" alignment="0" max="32767" attributes="0"/>
-                              <Component id="manageQuantity" alignment="0" min="-2" pref="223" max="-2" attributes="0"/>
+                              <Component id="productReportingButton" alignment="0" max="32767" attributes="0"/>
+                              <Component id="manipulateProductDetailsButton" alignment="0" max="32767" attributes="0"/>
+                              <Component id="manageProductQuantityButton" alignment="0" min="-2" pref="223" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="117" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -346,20 +346,20 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                          <Component id="welcome_window" min="-2" pref="88" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                          <Component id="manipulateProduct" min="-2" pref="38" max="-2" attributes="0"/>
+                          <Component id="welcomeWindowLabel" min="-2" pref="88" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                          <Component id="manipulateProductDetailsButton" min="-2" pref="38" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                          <Component id="manageQuantity" min="-2" pref="41" max="-2" attributes="0"/>
+                          <Component id="manageProductQuantityButton" min="-2" pref="41" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                          <Component id="productReporting" min="-2" pref="40" max="-2" attributes="0"/>
-                          <EmptySpace pref="283" max="32767" attributes="0"/>
+                          <Component id="productReportingButton" min="-2" pref="40" max="-2" attributes="0"/>
+                          <EmptySpace pref="274" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JButton" name="manipulateProduct">
+                <Component class="javax.swing.JButton" name="manipulateProductDetailsButton">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="18" style="0"/>
@@ -372,12 +372,12 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="loginMouseEntered"/>
-                    <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="loginMouseExited"/>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="manipulateProductActionPerformed"/>
+                    <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="loginButtonMouseEntered"/>
+                    <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="loginButtonMouseExited"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="manipulateProductDetailsButtonActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="manageQuantity">
+                <Component class="javax.swing.JButton" name="manageProductQuantityButton">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="18" style="0"/>
@@ -390,12 +390,12 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="loginMouseEntered"/>
-                    <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="loginMouseExited"/>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="manageQuantityActionPerformed"/>
+                    <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="loginButtonMouseEntered"/>
+                    <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="loginButtonMouseExited"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="manageProductQuantityButtonActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="productReporting">
+                <Component class="javax.swing.JButton" name="productReportingButton">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="18" style="0"/>
@@ -408,12 +408,12 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="loginMouseEntered"/>
-                    <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="loginMouseExited"/>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="productReportingActionPerformed"/>
+                    <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="loginButtonMouseEntered"/>
+                    <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="loginButtonMouseExited"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="productReportingButtonActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="welcome_window">
+                <Component class="javax.swing.JLabel" name="welcomeWindowLabel">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="24" style="0"/>
@@ -422,12 +422,14 @@
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="Welcome Window"/>
+                    <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="&quot;&lt;html&gt;&amp;emsp;&amp;ensp;&amp;ensp;Welcome to the Inventory Store&amp;ensp;&lt;/br&gt;Please choose appropriate operation from&amp;ensp;&amp;ensp;below&lt;/html&gt;&quot;" type="code"/>
+                    </Property>
                   </Properties>
                 </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="ProductDetailsPanel">
+            <Container class="javax.swing.JPanel" name="productDetailsPanel">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ad" green="90" red="23" type="rgb"/>
@@ -442,14 +444,14 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="manipulate_product" alignment="0" pref="459" max="32767" attributes="0"/>
+                      <Component id="manipulateProductDetailsLabel" alignment="0" pref="469" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="123" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="122" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="back_button3" max="32767" attributes="0"/>
-                              <Component id="delProduct" alignment="0" max="32767" attributes="0"/>
-                              <Component id="modProduct" alignment="0" max="32767" attributes="0"/>
-                              <Component id="addProduct" alignment="0" min="-2" pref="213" max="-2" attributes="0"/>
+                              <Component id="backProductDetailsButton" max="32767" attributes="0"/>
+                              <Component id="deleteProductDetailsButton" alignment="0" max="32767" attributes="0"/>
+                              <Component id="modifyProductDetailsButton" alignment="0" max="32767" attributes="0"/>
+                              <Component id="addNewProductDetailsButton" alignment="0" min="-2" pref="213" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -458,22 +460,22 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="manipulate_product" min="-2" pref="85" max="-2" attributes="0"/>
+                          <Component id="manipulateProductDetailsLabel" min="-2" pref="145" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="addProduct" min="-2" pref="37" max="-2" attributes="0"/>
+                          <Component id="addNewProductDetailsButton" min="-2" pref="37" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                          <Component id="delProduct" min="-2" pref="37" max="-2" attributes="0"/>
+                          <Component id="deleteProductDetailsButton" min="-2" pref="37" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                          <Component id="modProduct" min="-2" pref="37" max="-2" attributes="0"/>
+                          <Component id="modifyProductDetailsButton" min="-2" pref="37" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                          <Component id="back_button3" min="-2" pref="43" max="-2" attributes="0"/>
-                          <EmptySpace pref="215" max="32767" attributes="0"/>
+                          <Component id="backProductDetailsButton" min="-2" pref="43" max="-2" attributes="0"/>
+                          <EmptySpace pref="155" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JButton" name="addProduct">
+                <Component class="javax.swing.JButton" name="addNewProductDetailsButton">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -489,10 +491,10 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addProductActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addNewProductDetailsButtonActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="delProduct">
+                <Component class="javax.swing.JButton" name="deleteProductDetailsButton">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -508,10 +510,10 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="delProductActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteProductDetailsButtonActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="modProduct">
+                <Component class="javax.swing.JButton" name="modifyProductDetailsButton">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -527,10 +529,10 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="modProductActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="modifyProductDetailsButtonActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="manipulate_product">
+                <Component class="javax.swing.JLabel" name="manipulateProductDetailsLabel">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="24" style="0"/>
@@ -539,10 +541,12 @@
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="Manipulate Product Details"/>
+                    <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="&quot;&lt;html&gt;&amp;emsp;&amp;ensp;&amp;ensp;Welcome to the Manipulate Product Details Window&lt;br&gt;Please choose appropriate operation from below&lt;/html&gt;&quot;" type="code"/>
+                    </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="back_button3">
+                <Component class="javax.swing.JButton" name="backProductDetailsButton">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="18" style="0"/>
@@ -555,12 +559,12 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="back_button3ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backProductDetailsButtonActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="ProductQuantityPanel">
+            <Container class="javax.swing.JPanel" name="productQuantityPanel">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ad" green="90" red="23" type="rgb"/>
@@ -576,63 +580,56 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="back_button1" alignment="0" max="32767" attributes="0"/>
-                              <Component id="quantity1" alignment="0" max="32767" attributes="0"/>
-                              <Component id="p_id" alignment="0" max="32767" attributes="0"/>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="addQuantity" min="-2" pref="130" max="-2" attributes="0"/>
-                                  <EmptySpace pref="60" max="32767" attributes="0"/>
-                                  <Component id="removeQuantity" min="-2" pref="146" max="-2" attributes="0"/>
-                              </Group>
-                              <Component id="productId_label" alignment="0" max="32767" attributes="0"/>
-                              <Component id="quantity_label" alignment="0" max="32767" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                          <Component id="message" min="-2" pref="380" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="manageProductQuantityLabel" min="-2" pref="459" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="jLabel12" min="-2" pref="459" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="backProductQuantityButton" alignment="0" max="32767" attributes="0"/>
+                              <Component id="productQuantityTextField" alignment="0" max="32767" attributes="0"/>
+                              <Component id="productIdQuantityTextField" alignment="0" max="32767" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="addQuantityButton" min="-2" pref="130" max="-2" attributes="0"/>
+                                  <EmptySpace pref="60" max="32767" attributes="0"/>
+                                  <Component id="removeQuantityButton" min="-2" pref="146" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="productIdQuantityLabel" alignment="0" max="32767" attributes="0"/>
+                              <Component id="productQuantityLabel" alignment="0" max="32767" attributes="0"/>
+                              <Component id="displayMessageProductQuantityLabel" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="jLabel12" min="-2" pref="66" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="115" max="-2" attributes="0"/>
-                                  <Component id="message" min="-2" pref="28" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                                  <Component id="productId_label" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                                  <Component id="p_id" min="-2" pref="27" max="-2" attributes="0"/>
-                                  <EmptySpace min="72" pref="72" max="-2" attributes="0"/>
-                                  <Component id="quantity_label" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="quantity1" min="-2" pref="27" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                          <Component id="manageProductQuantityLabel" min="-2" pref="66" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                          <Component id="productIdQuantityLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                          <Component id="productIdQuantityTextField" min="-2" pref="39" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                          <Component id="displayMessageProductQuantityLabel" min="-2" pref="28" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="productQuantityLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="productQuantityTextField" min="-2" pref="36" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="addQuantity" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="removeQuantity" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="addQuantityButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="removeQuantityButton" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                          <Component id="back_button1" min="-2" pref="43" max="-2" attributes="0"/>
+                          <Component id="backProductQuantityButton" min="-2" pref="43" max="-2" attributes="0"/>
                           <EmptySpace pref="163" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="productId_label">
+                <Component class="javax.swing.JLabel" name="productIdQuantityLabel">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="12" style="0"/>
@@ -643,7 +640,7 @@
                     <Property name="text" type="java.lang.String" value="Product ID"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="quantity_label">
+                <Component class="javax.swing.JLabel" name="productQuantityLabel">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="12" style="0"/>
@@ -654,7 +651,7 @@
                     <Property name="text" type="java.lang.String" value="Quantity"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="p_id">
+                <Component class="javax.swing.JTextField" name="productIdQuantityTextField">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ad" green="90" red="23" type="rgb"/>
@@ -666,10 +663,10 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="p_idFocusLost"/>
+                    <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="productIdQuantityTextFieldFocusLost"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="quantity1">
+                <Component class="javax.swing.JTextField" name="productQuantityTextField">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ad" green="90" red="23" type="rgb"/>
@@ -681,7 +678,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="addQuantity">
+                <Component class="javax.swing.JButton" name="addQuantityButton">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="24" style="0"/>
@@ -694,10 +691,10 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addQuantityActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addQuantityButtonActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="removeQuantity">
+                <Component class="javax.swing.JButton" name="removeQuantityButton">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="24" style="0"/>
@@ -710,10 +707,10 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="removeQuantityActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="removeQuantityButtonActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel12">
+                <Component class="javax.swing.JLabel" name="manageProductQuantityLabel">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="24" style="0"/>
@@ -725,7 +722,7 @@
                     <Property name="text" type="java.lang.String" value="Manage Product Quantity"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="back_button1">
+                <Component class="javax.swing.JButton" name="backProductQuantityButton">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="24" style="0"/>
@@ -738,10 +735,10 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="back_button1ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backProductQuantityButtonActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="message">
+                <Component class="javax.swing.JLabel" name="displayMessageProductQuantityLabel">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="14" style="0"/>
@@ -753,7 +750,7 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="ProductReportingPanel">
+            <Container class="javax.swing.JPanel" name="productReportingPanel">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ad" green="90" red="23" type="rgb"/>
@@ -768,38 +765,38 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel13" alignment="0" max="32767" attributes="0"/>
+                      <Component id="productReportingLabel" alignment="0" pref="469" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="147" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="145" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="report_date_based" max="32767" attributes="0"/>
-                              <Component id="monthly_report" alignment="1" max="32767" attributes="0"/>
-                              <Component id="overall_report" alignment="1" max="32767" attributes="0"/>
-                              <Component id="back_button2" alignment="1" min="-2" pref="159" max="-2" attributes="0"/>
+                              <Component id="reportDateBasedButton" max="32767" attributes="0"/>
+                              <Component id="monthlyReportButton" alignment="1" max="32767" attributes="0"/>
+                              <Component id="overallReportButton" alignment="1" max="32767" attributes="0"/>
+                              <Component id="backProductReportingLabel" alignment="1" min="-2" pref="159" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="153" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="jLabel13" min="-2" pref="80" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                          <Component id="overall_report" min="-2" pref="37" max="-2" attributes="0"/>
+                          <Component id="productReportingLabel" min="-2" pref="149" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                          <Component id="overallReportButton" min="-2" pref="37" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                          <Component id="monthly_report" min="-2" pref="37" max="-2" attributes="0"/>
+                          <Component id="monthlyReportButton" min="-2" pref="37" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                          <Component id="report_date_based" min="-2" pref="37" max="-2" attributes="0"/>
+                          <Component id="reportDateBasedButton" min="-2" pref="37" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                          <Component id="back_button2" min="-2" pref="37" max="-2" attributes="0"/>
-                          <EmptySpace pref="216" max="32767" attributes="0"/>
+                          <Component id="backProductReportingLabel" min="-2" pref="37" max="-2" attributes="0"/>
+                          <EmptySpace pref="149" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JButton" name="monthly_report">
+                <Component class="javax.swing.JButton" name="monthlyReportButton">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="18" style="0"/>
@@ -812,10 +809,10 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="monthly_reportActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="monthlyReportButtonActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="report_date_based">
+                <Component class="javax.swing.JButton" name="reportDateBasedButton">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="18" style="0"/>
@@ -828,10 +825,10 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="report_date_basedActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="reportDateBasedButtonActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="overall_report">
+                <Component class="javax.swing.JButton" name="overallReportButton">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="18" style="0"/>
@@ -844,10 +841,10 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="overall_reportActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="overallReportButtonActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel13">
+                <Component class="javax.swing.JLabel" name="productReportingLabel">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="24" style="0"/>
@@ -856,10 +853,12 @@
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="Product Reporting"/>
+                    <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="&quot;&lt;html&gt;&amp;emsp;&amp;ensp;&amp;ensp;Welcome to the Product Reporting Window&lt;br&gt;Please choose appropriate operation from below&lt;/html&gt;&quot;" type="code"/>
+                    </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="back_button2">
+                <Component class="javax.swing.JButton" name="backProductReportingLabel">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="18" style="0"/>
@@ -872,12 +871,12 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="back_button2ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backProductReportingLabelActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="AddProductPanel">
+            <Container class="javax.swing.JPanel" name="addProductPanel">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ad" green="90" red="23" type="rgb"/>
@@ -895,53 +894,53 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="cost" alignment="0" min="-2" pref="391" max="-2" attributes="0"/>
-                              <Component id="product_id" alignment="0" max="32767" attributes="0"/>
+                              <Component id="costPerUnitAddNewProductTextField" alignment="0" min="-2" pref="391" max="-2" attributes="0"/>
+                              <Component id="productIdAddNewProductTextField" alignment="0" max="32767" attributes="0"/>
                               <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                  <Component id="quantity" alignment="1" min="-2" pref="391" max="-2" attributes="0"/>
+                                  <Component id="quantityAddNewProductLabel" alignment="1" min="-2" pref="391" max="-2" attributes="0"/>
                                   <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="jButton2" min="-2" pref="141" max="-2" attributes="0"/>
+                                          <Component id="backAddNewProductButton" min="-2" pref="141" max="-2" attributes="0"/>
                                           <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="add" min="-2" pref="166" max="-2" attributes="0"/>
+                                          <Component id="addNewProductButton" min="-2" pref="166" max="-2" attributes="0"/>
                                       </Group>
-                                      <Component id="quant" alignment="0" min="-2" pref="391" max="-2" attributes="0"/>
+                                      <Component id="quantityAddNewProductTextField" alignment="0" min="-2" pref="391" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <Component id="name" alignment="0" pref="392" max="32767" attributes="0"/>
-                              <Component id="cpu" alignment="0" max="32767" attributes="0"/>
-                              <Component id="product_name" alignment="0" max="32767" attributes="0"/>
-                              <Component id="id" alignment="0" pref="393" max="32767" attributes="0"/>
+                              <Component id="productNameAddNewProductLabel" alignment="0" pref="392" max="32767" attributes="0"/>
+                              <Component id="costPerUnitAddNewProductLabel" alignment="0" max="32767" attributes="0"/>
+                              <Component id="productNameAddNewProductTextField" alignment="0" max="32767" attributes="0"/>
+                              <Component id="productIdAddNewProductLabel" alignment="0" pref="393" max="32767" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="33" max="32767" attributes="0"/>
+                          <EmptySpace pref="43" max="32767" attributes="0"/>
                       </Group>
-                      <Component id="jLabel14" alignment="1" max="32767" attributes="0"/>
+                      <Component id="addNewProductLabel" alignment="1" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="jLabel14" min="-2" pref="69" max="-2" attributes="0"/>
+                          <Component id="addNewProductLabel" min="-2" pref="69" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                          <Component id="id" min="-2" pref="27" max="-2" attributes="0"/>
+                          <Component id="productIdAddNewProductLabel" min="-2" pref="27" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                          <Component id="product_id" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="productIdAddNewProductTextField" min="-2" pref="40" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                          <Component id="name" min="-2" pref="27" max="-2" attributes="0"/>
+                          <Component id="productNameAddNewProductLabel" min="-2" pref="27" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                          <Component id="product_name" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="productNameAddNewProductTextField" min="-2" pref="40" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                          <Component id="cpu" min="-2" pref="27" max="-2" attributes="0"/>
+                          <Component id="costPerUnitAddNewProductLabel" min="-2" pref="27" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                          <Component id="cost" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="costPerUnitAddNewProductTextField" min="-2" pref="40" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                          <Component id="quantity" min="-2" pref="27" max="-2" attributes="0"/>
+                          <Component id="quantityAddNewProductLabel" min="-2" pref="27" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                          <Component id="quant" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="quantityAddNewProductTextField" min="-2" pref="40" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jButton2" alignment="3" min="-2" pref="46" max="-2" attributes="0"/>
-                              <Component id="add" alignment="3" min="-2" pref="46" max="-2" attributes="0"/>
+                              <Component id="backAddNewProductButton" alignment="3" min="-2" pref="46" max="-2" attributes="0"/>
+                              <Component id="addNewProductButton" alignment="3" min="-2" pref="46" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="76" max="32767" attributes="0"/>
                       </Group>
@@ -949,7 +948,7 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JButton" name="add">
+                <Component class="javax.swing.JButton" name="addNewProductButton">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="18" style="0"/>
@@ -962,10 +961,10 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addNewProductButtonActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="id">
+                <Component class="javax.swing.JLabel" name="productIdAddNewProductLabel">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="12" style="0"/>
@@ -976,7 +975,7 @@
                     <Property name="text" type="java.lang.String" value="Product Id"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="cpu">
+                <Component class="javax.swing.JLabel" name="costPerUnitAddNewProductLabel">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="12" style="0"/>
@@ -987,7 +986,7 @@
                     <Property name="text" type="java.lang.String" value="Cost Per Unit"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="quantity">
+                <Component class="javax.swing.JLabel" name="quantityAddNewProductLabel">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="12" style="0"/>
@@ -998,7 +997,7 @@
                     <Property name="text" type="java.lang.String" value="Quantity"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="product_id">
+                <Component class="javax.swing.JTextField" name="productIdAddNewProductTextField">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ad" green="90" red="23" type="rgb"/>
@@ -1013,25 +1012,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="product_name">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ad" green="90" red="23" type="rgb"/>
-                    </Property>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Georgia" size="14" style="0"/>
-                    </Property>
-                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-                        <MatteColorBorder bottom="1" left="0" right="0" top="0"/>
-                      </Border>
-                    </Property>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="product_nameFocusLost"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JTextField" name="quant">
+                <Component class="javax.swing.JTextField" name="productNameAddNewProductTextField">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ad" green="90" red="23" type="rgb"/>
@@ -1046,10 +1027,28 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="quantFocusLost"/>
+                    <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="productNameAddNewProductTextFieldFocusLost"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="cost">
+                <Component class="javax.swing.JTextField" name="quantityAddNewProductTextField">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ad" green="90" red="23" type="rgb"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Georgia" size="14" style="0"/>
+                    </Property>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
+                        <MatteColorBorder bottom="1" left="0" right="0" top="0"/>
+                      </Border>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="quantityAddNewProductTextFieldFocusLost"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JTextField" name="costPerUnitAddNewProductTextField">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ad" green="90" red="23" type="rgb"/>
@@ -1064,7 +1063,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="name">
+                <Component class="javax.swing.JLabel" name="productNameAddNewProductLabel">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="12" style="0"/>
@@ -1075,7 +1074,7 @@
                     <Property name="text" type="java.lang.String" value="Product Name"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel14">
+                <Component class="javax.swing.JLabel" name="addNewProductLabel">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="24" style="0"/>
@@ -1087,7 +1086,7 @@
                     <Property name="text" type="java.lang.String" value="Add New Product"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton2">
+                <Component class="javax.swing.JButton" name="backAddNewProductButton">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="18" style="0"/>
@@ -1100,12 +1099,12 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backAddNewProductButtonActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="DelProductPanel">
+            <Container class="javax.swing.JPanel" name="deletelProductPanel">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ad" green="90" red="23" type="rgb"/>
@@ -1120,42 +1119,42 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel15" alignment="0" pref="459" max="32767" attributes="0"/>
+                      <Component id="deleteProductLabel" alignment="0" pref="469" max="32767" attributes="0"/>
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace pref="44" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="jLabel2" alignment="1" pref="372" max="32767" attributes="0"/>
-                              <Component id="p_id4" alignment="1" max="32767" attributes="0"/>
+                              <Component id="productIdDeleteProductLabel" alignment="1" pref="372" max="32767" attributes="0"/>
+                              <Component id="productIdDeleteProductTextField" alignment="1" max="32767" attributes="0"/>
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jButton3" min="-2" pref="125" max="-2" attributes="0"/>
+                                  <Component id="backDeleteProductButton" min="-2" pref="125" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="delete" min="-2" max="-2" attributes="0"/>
+                                  <Component id="deleteProductButton" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="jLabel15" min="-2" pref="80" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                          <Component id="jLabel2" min="-2" pref="29" max="-2" attributes="0"/>
+                          <Component id="deleteProductLabel" min="-2" pref="146" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="productIdDeleteProductLabel" min="-2" pref="29" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                          <Component id="p_id4" min="-2" pref="32" max="-2" attributes="0"/>
+                          <Component id="productIdDeleteProductTextField" min="-2" pref="32" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jButton3" pref="47" max="32767" attributes="0"/>
-                              <Component id="delete" max="32767" attributes="0"/>
+                              <Component id="backDeleteProductButton" max="32767" attributes="0"/>
+                              <Component id="deleteProductButton" min="-2" pref="47" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="318" max="32767" attributes="0"/>
+                          <EmptySpace pref="269" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="jLabel2">
+                <Component class="javax.swing.JLabel" name="productIdDeleteProductLabel">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="12" style="0"/>
@@ -1166,7 +1165,7 @@
                     <Property name="text" type="java.lang.String" value="Product Id"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="p_id4">
+                <Component class="javax.swing.JTextField" name="productIdDeleteProductTextField">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ad" green="90" red="23" type="rgb"/>
@@ -1178,10 +1177,10 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="p_id4ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="productIdDeleteProductTextFieldActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="delete">
+                <Component class="javax.swing.JButton" name="deleteProductButton">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="18" style="0"/>
@@ -1189,10 +1188,10 @@
                     <Property name="text" type="java.lang.String" value="Delete Product"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteProductButtonActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel15">
+                <Component class="javax.swing.JLabel" name="deleteProductLabel">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="24" style="0"/>
@@ -1201,10 +1200,12 @@
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="Delete Product"/>
+                    <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="&quot;&lt;html&gt;Please enter the product ID in the&lt;br&gt;below fieldto delete details of that product&lt;/html&gt;&quot;" type="code"/>
+                    </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton3">
+                <Component class="javax.swing.JButton" name="backDeleteProductButton">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="18" style="0"/>
@@ -1212,12 +1213,12 @@
                     <Property name="text" type="java.lang.String" value="Back"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backDeleteProductButtonActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="ModProductPanel">
+            <Container class="javax.swing.JPanel" name="modifyProductPanel">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ad" green="90" red="23" type="rgb"/>
@@ -1232,21 +1233,21 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel16" alignment="0" pref="459" max="32767" attributes="0"/>
+                      <Component id="modifyProductLabel" alignment="0" pref="469" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                              <Component id="id4" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="cpu1" max="32767" attributes="0"/>
-                              <Component id="cost1" max="32767" attributes="0"/>
-                              <Component id="p_name" alignment="0" max="32767" attributes="0"/>
-                              <Component id="p_id5" pref="345" max="32767" attributes="0"/>
-                              <Component id="message3" max="32767" attributes="0"/>
+                              <Component id="productNameModifyProductLabel" min="-2" max="-2" attributes="0"/>
+                              <Component id="productIdModifyProductLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="costPerUnitModifyProductLabel" max="32767" attributes="0"/>
+                              <Component id="costPerUnitModifyProductTextField" max="32767" attributes="0"/>
+                              <Component id="productNameModifyProductTextField" alignment="0" max="32767" attributes="0"/>
+                              <Component id="productIdModifyProductTextField" pref="345" max="32767" attributes="0"/>
+                              <Component id="displayMessageModifyProductLabel" max="32767" attributes="0"/>
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jButton4" min="-2" pref="101" max="-2" attributes="0"/>
+                                  <Component id="backModifyProductButton" min="-2" pref="101" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="modify" min="-2" pref="160" max="-2" attributes="0"/>
+                                  <Component id="modifyProductButton" min="-2" pref="160" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
@@ -1256,25 +1257,25 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="jLabel16" min="-2" pref="93" max="-2" attributes="0"/>
+                          <Component id="modifyProductLabel" min="-2" pref="93" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="id4" min="-2" max="-2" attributes="0"/>
+                          <Component id="productIdModifyProductLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                          <Component id="p_id5" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="productIdModifyProductTextField" min="-2" pref="40" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="message3" min="-2" max="-2" attributes="0"/>
+                          <Component id="displayMessageModifyProductLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
-                          <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                          <Component id="productNameModifyProductLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                          <Component id="p_name" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="productNameModifyProductTextField" min="-2" pref="40" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                          <Component id="cpu1" min="-2" max="-2" attributes="0"/>
+                          <Component id="costPerUnitModifyProductLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                          <Component id="cost1" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="costPerUnitModifyProductTextField" min="-2" pref="40" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jButton4" alignment="3" min="-2" pref="46" max="-2" attributes="0"/>
-                              <Component id="modify" alignment="3" min="-2" pref="46" max="-2" attributes="0"/>
+                              <Component id="backModifyProductButton" alignment="3" min="-2" pref="46" max="-2" attributes="0"/>
+                              <Component id="modifyProductButton" alignment="3" min="-2" pref="46" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="162" max="32767" attributes="0"/>
                       </Group>
@@ -1282,7 +1283,7 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="id4">
+                <Component class="javax.swing.JLabel" name="productIdModifyProductLabel">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="12" style="0"/>
@@ -1293,7 +1294,7 @@
                     <Property name="text" type="java.lang.String" value="Product Id"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel4">
+                <Component class="javax.swing.JLabel" name="productNameModifyProductLabel">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="12" style="0"/>
@@ -1304,7 +1305,7 @@
                     <Property name="text" type="java.lang.String" value="Product Name"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="cpu1">
+                <Component class="javax.swing.JLabel" name="costPerUnitModifyProductLabel">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="12" style="0"/>
@@ -1315,7 +1316,7 @@
                     <Property name="text" type="java.lang.String" value="Cost Per Unit"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="p_id5">
+                <Component class="javax.swing.JTextField" name="productIdModifyProductTextField">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ad" green="90" red="23" type="rgb"/>
@@ -1327,10 +1328,10 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="p_id5FocusLost"/>
+                    <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="productIdModifyProductTextFieldFocusLost"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="p_name">
+                <Component class="javax.swing.JTextField" name="productNameModifyProductTextField">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ad" green="90" red="23" type="rgb"/>
@@ -1342,10 +1343,10 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="p_nameFocusLost"/>
+                    <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="productNameModifyProductTextFieldFocusLost"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="cost1">
+                <Component class="javax.swing.JTextField" name="costPerUnitModifyProductTextField">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ad" green="90" red="23" type="rgb"/>
@@ -1357,10 +1358,10 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cost1ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="costPerUnitModifyProductTextFieldActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="modify">
+                <Component class="javax.swing.JButton" name="modifyProductButton">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="18" style="0"/>
@@ -1368,10 +1369,10 @@
                     <Property name="text" type="java.lang.String" value="Modify Product"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="modifyActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="modifyProductButtonActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel16">
+                <Component class="javax.swing.JLabel" name="modifyProductLabel">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="24" style="0"/>
@@ -1383,7 +1384,7 @@
                     <Property name="text" type="java.lang.String" value="Modify Product"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="message3">
+                <Component class="javax.swing.JLabel" name="displayMessageModifyProductLabel">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="14" style="0"/>
@@ -1393,7 +1394,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton4">
+                <Component class="javax.swing.JButton" name="backModifyProductButton">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="18" style="0"/>
@@ -1401,12 +1402,12 @@
                     <Property name="text" type="java.lang.String" value="Back"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backModifyProductButtonActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="OverallReportPanel">
+            <Container class="javax.swing.JPanel" name="overallReportPanel">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ad" green="90" red="23" type="rgb"/>
@@ -1424,39 +1425,39 @@
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="p_id1" alignment="0" max="32767" attributes="0"/>
-                              <Component id="id2" alignment="0" pref="364" max="32767" attributes="0"/>
+                              <Component id="productIdOverallReportTextField" alignment="0" max="32767" attributes="0"/>
+                              <Component id="productIdOverallReportLabel" alignment="0" pref="374" max="32767" attributes="0"/>
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jButton5" min="-2" pref="105" max="-2" attributes="0"/>
+                                  <Component id="backOverallReportButton" min="-2" pref="105" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="generateReport1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="generateOverallReportButton" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="jLabel17" alignment="0" max="32767" attributes="0"/>
+                      <Component id="overallReportLabel" alignment="0" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="jLabel17" min="-2" pref="84" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                          <Component id="id2" min="-2" pref="40" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                          <Component id="p_id1" min="-2" pref="28" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
+                          <Component id="overallReportLabel" min="-2" pref="166" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                          <Component id="productIdOverallReportLabel" min="-2" pref="32" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="productIdOverallReportTextField" min="-2" pref="38" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="generateReport1" pref="45" max="32767" attributes="0"/>
-                              <Component id="jButton5" max="32767" attributes="0"/>
+                              <Component id="generateOverallReportButton" max="32767" attributes="0"/>
+                              <Component id="backOverallReportButton" min="-2" pref="45" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="305" max="32767" attributes="0"/>
+                          <EmptySpace pref="198" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="id2">
+                <Component class="javax.swing.JLabel" name="productIdOverallReportLabel">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="12" style="0"/>
@@ -1467,7 +1468,7 @@
                     <Property name="text" type="java.lang.String" value="Product Id"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="p_id1">
+                <Component class="javax.swing.JTextField" name="productIdOverallReportTextField">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ad" green="90" red="23" type="rgb"/>
@@ -1479,7 +1480,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="generateReport1">
+                <Component class="javax.swing.JButton" name="generateOverallReportButton">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="18" style="0"/>
@@ -1487,22 +1488,21 @@
                     <Property name="text" type="java.lang.String" value="Generate Report"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="generateReport1ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="generateOverallReportButtonActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel17">
+                <Component class="javax.swing.JLabel" name="overallReportLabel">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="24" style="0"/>
                     </Property>
-                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                    </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="Overall Report"/>
+                    <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="&quot;&lt;html&gt;Please enter the product ID in the&lt;br&gt;below field to generate report of all sales and purchase details happened from starting&lt;/html&gt;&quot;" type="code"/>
+                    </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton5">
+                <Component class="javax.swing.JButton" name="backOverallReportButton">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="18" style="0"/>
@@ -1510,12 +1510,12 @@
                     <Property name="text" type="java.lang.String" value="Back"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton5ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backOverallReportButtonActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="MonthlyReportPanel">
+            <Container class="javax.swing.JPanel" name="monthlyReportPanel">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ad" green="90" red="23" type="rgb"/>
@@ -1530,42 +1530,42 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel20" alignment="0" pref="459" max="32767" attributes="0"/>
+                      <Component id="monthlyReportLabel" alignment="0" pref="469" max="32767" attributes="0"/>
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="p_id2" alignment="0" max="32767" attributes="0"/>
-                              <Component id="id3" alignment="0" max="32767" attributes="0"/>
+                              <Component id="productIdMonthlylReportLabel" max="32767" attributes="0"/>
+                              <Component id="productIdMonthlyReportTextField" alignment="0" max="32767" attributes="0"/>
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jButton6" min="-2" pref="105" max="-2" attributes="0"/>
+                                  <Component id="backMonthyReportButton" min="-2" pref="105" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="generateReport2" min="-2" pref="176" max="-2" attributes="0"/>
+                                  <Component id="generateMonthlyReportButton" min="-2" pref="176" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="jLabel20" min="-2" pref="80" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                          <Component id="id3" min="-2" pref="32" max="-2" attributes="0"/>
+                          <Component id="monthlyReportLabel" min="-2" pref="150" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                          <Component id="productIdMonthlylReportLabel" min="-2" pref="32" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                          <Component id="p_id2" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="productIdMonthlyReportTextField" min="-2" pref="40" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="generateReport2" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
-                              <Component id="jButton6" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
+                              <Component id="generateMonthlyReportButton" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
+                              <Component id="backMonthyReportButton" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="301" max="32767" attributes="0"/>
+                          <EmptySpace pref="232" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JButton" name="generateReport2">
+                <Component class="javax.swing.JButton" name="generateMonthlyReportButton">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="18" style="0"/>
@@ -1573,10 +1573,10 @@
                     <Property name="text" type="java.lang.String" value="Generate Report"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="generateReport2ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="generateMonthlyReportButtonActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="id3">
+                <Component class="javax.swing.JLabel" name="productIdMonthlylReportLabel">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="12" style="0"/>
@@ -1587,7 +1587,7 @@
                     <Property name="text" type="java.lang.String" value="Product Id"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="p_id2">
+                <Component class="javax.swing.JTextField" name="productIdMonthlyReportTextField">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ad" green="90" red="23" type="rgb"/>
@@ -1602,7 +1602,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel20">
+                <Component class="javax.swing.JLabel" name="monthlyReportLabel">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="24" style="0"/>
@@ -1611,10 +1611,12 @@
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="Monthly Report"/>
+                    <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="&quot;&lt;html&gt;Please enter the product ID in the&lt;br&gt;below field to know monthly sale and purchase for that product&lt;/html&gt;&quot;" type="code"/>
+                    </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton6">
+                <Component class="javax.swing.JButton" name="backMonthyReportButton">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="18" style="0"/>
@@ -1622,12 +1624,12 @@
                     <Property name="text" type="java.lang.String" value="Back"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton6ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backMonthyReportButtonActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="DateBasedReportPanel">
+            <Container class="javax.swing.JPanel" name="dateBasedReportPanel">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ad" green="90" red="23" type="rgb"/>
@@ -1643,30 +1645,30 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="jLabel18" min="-2" pref="457" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="2" max="32767" attributes="0"/>
+                          <Component id="reportDateBasedLabel" min="-2" pref="457" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="12" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="103" alignment="1" groupAlignment="0" attributes="0">
                                   <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="jLabel9" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="p_id6" alignment="0" min="-2" pref="379" max="-2" attributes="0"/>
+                                      <Component id="productIdReportDateBasedLabel" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="productIdReportDateBasedTextField" alignment="0" min="-2" pref="379" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="jLabel7" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="endDateLabel" alignment="0" max="32767" attributes="0"/>
                                       <Group type="102" alignment="1" attributes="0">
-                                          <Component id="jButton1" min="-2" pref="113" max="-2" attributes="0"/>
+                                          <Component id="backReportDateBasedButton" min="-2" pref="113" max="-2" attributes="0"/>
                                           <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="generateReport3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="generateReportDateBasedButton" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <Component id="endDate" alignment="0" min="-2" pref="379" max="-2" attributes="0"/>
+                                      <Component id="endDateChooser" alignment="0" min="-2" pref="379" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="103" alignment="1" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="jLabel8" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="startDate" alignment="0" min="-2" pref="379" max="-2" attributes="0"/>
+                                  <Component id="startDateLabel" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="startDateChooser" alignment="0" min="-2" pref="379" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
@@ -1676,31 +1678,31 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="jLabel18" min="-2" pref="75" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jLabel9" min="-2" pref="28" max="-2" attributes="0"/>
+                          <Component id="reportDateBasedLabel" min="-2" pref="136" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                          <Component id="productIdReportDateBasedLabel" min="-2" pref="28" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                          <Component id="p_id6" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="productIdReportDateBasedTextField" min="-2" pref="40" max="-2" attributes="0"/>
                           <EmptySpace pref="31" max="32767" attributes="0"/>
-                          <Component id="jLabel8" min="-2" pref="28" max="-2" attributes="0"/>
+                          <Component id="startDateLabel" min="-2" pref="28" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                          <Component id="startDate" min="-2" pref="32" max="-2" attributes="0"/>
+                          <Component id="startDateChooser" min="-2" pref="32" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                          <Component id="jLabel7" min="-2" pref="28" max="-2" attributes="0"/>
+                          <Component id="endDateLabel" min="-2" pref="28" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                          <Component id="endDate" min="-2" pref="33" max="-2" attributes="0"/>
+                          <Component id="endDateChooser" min="-2" pref="33" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="generateReport3" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
-                              <Component id="jButton1" alignment="3" min="-2" pref="42" max="-2" attributes="0"/>
+                              <Component id="generateReportDateBasedButton" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
+                              <Component id="backReportDateBasedButton" alignment="3" min="-2" pref="42" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="140" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JButton" name="generateReport3">
+                <Component class="javax.swing.JButton" name="generateReportDateBasedButton">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="18" style="0"/>
@@ -1708,10 +1710,10 @@
                     <Property name="text" type="java.lang.String" value="Generate Report"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="generateReport3ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="generateReportDateBasedButtonActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="p_id6">
+                <Component class="javax.swing.JTextField" name="productIdReportDateBasedTextField">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ad" green="90" red="23" type="rgb"/>
@@ -1723,7 +1725,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel7">
+                <Component class="javax.swing.JLabel" name="endDateLabel">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="12" style="0"/>
@@ -1734,7 +1736,7 @@
                     <Property name="text" type="java.lang.String" value="End Date"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel8">
+                <Component class="javax.swing.JLabel" name="startDateLabel">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="12" style="0"/>
@@ -1745,7 +1747,7 @@
                     <Property name="text" type="java.lang.String" value="Start Date"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel9">
+                <Component class="javax.swing.JLabel" name="productIdReportDateBasedLabel">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="12" style="0"/>
@@ -1756,7 +1758,7 @@
                     <Property name="text" type="java.lang.String" value="Product Id"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel18">
+                <Component class="javax.swing.JLabel" name="reportDateBasedLabel">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="24" style="0"/>
@@ -1765,10 +1767,12 @@
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="Report Date Based"/>
+                    <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="&quot;&lt;html&gt;Please enter the product ID in the&lt;br&gt;Product ID field and select dates to generate the report&lt;/html&gt;&quot;" type="code"/>
+                    </Property>
                   </Properties>
                 </Component>
-                <Component class="com.toedter.calendar.JDateChooser" name="startDate">
+                <Component class="com.toedter.calendar.JDateChooser" name="startDateChooser">
                   <Properties>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
@@ -1781,10 +1785,10 @@
                     </Property>
                   </Properties>
                   <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="((JTextField)(startDate.getComponent(1))).setBackground(new Color(35,144,173));"/>
+                    <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="((JTextField)(startDateChooser.getComponent(1))).setBackground(new Color(35,144,173));"/>
                   </AuxValues>
                 </Component>
-                <Component class="com.toedter.calendar.JDateChooser" name="endDate">
+                <Component class="com.toedter.calendar.JDateChooser" name="endDateChooser">
                   <Properties>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
@@ -1796,10 +1800,10 @@
                     </Property>
                   </Properties>
                   <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="((JTextField)(endDate.getComponent(1))).setBackground(new Color(35,144,173));"/>
+                    <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="((JTextField)(endDateChooser.getComponent(1))).setBackground(new Color(35,144,173));"/>
                   </AuxValues>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton1">
+                <Component class="javax.swing.JButton" name="backReportDateBasedButton">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="18" style="0"/>
@@ -1807,12 +1811,12 @@
                     <Property name="text" type="java.lang.String" value="Back"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backReportDateBasedButtonActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="reportPanel">
+            <Container class="javax.swing.JPanel" name="reportTablePanel">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ad" green="90" red="23" type="rgb"/>
@@ -1828,17 +1832,17 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="jLabel19" min="-2" pref="494" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jScrollPane1" min="-2" pref="395" max="-2" attributes="0"/>
-                              <Component id="jButton7" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                              <Component id="message1" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+                              <Component id="reportTableScrollPane" min="-2" pref="395" max="-2" attributes="0"/>
+                              <Component id="backReportTableButton" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="displayMessageReportTableLabel" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="reportTabelLabel" min="-2" pref="459" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1846,27 +1850,27 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                          <Component id="jLabel19" min="-2" pref="74" max="-2" attributes="0"/>
+                          <Component id="reportTabelLabel" min="-2" pref="74" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                          <Component id="jScrollPane1" min="-2" pref="144" max="-2" attributes="0"/>
+                          <Component id="reportTableScrollPane" min="-2" pref="144" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="message1" min="-2" pref="31" max="-2" attributes="0"/>
+                          <Component id="displayMessageReportTableLabel" min="-2" pref="31" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-                          <Component id="jButton7" min="-2" max="-2" attributes="0"/>
+                          <Component id="backReportTableButton" min="-2" max="-2" attributes="0"/>
                           <EmptySpace pref="221" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+                <Container class="javax.swing.JScrollPane" name="reportTableScrollPane">
                   <AuxValues>
                     <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                   </AuxValues>
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTable" name="table">
+                    <Component class="javax.swing.JTable" name="reportTable">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="ad" green="90" red="23" type="rgb"/>
@@ -1921,7 +1925,7 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Component class="javax.swing.JLabel" name="jLabel19">
+                <Component class="javax.swing.JLabel" name="reportTabelLabel">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="24" style="0"/>
@@ -1933,14 +1937,14 @@
                     <Property name="text" type="java.lang.String" value="Report Table"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="message1">
+                <Component class="javax.swing.JLabel" name="displayMessageReportTableLabel">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="14" style="0"/>
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton7">
+                <Component class="javax.swing.JButton" name="backReportTableButton">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Leelawadee UI Semilight" size="18" style="0"/>
@@ -1953,14 +1957,14 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton7ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backReportTableButtonActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>
             </Container>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JLabel" name="jLabel29">
+        <Component class="javax.swing.JLabel" name="exitDefaultPanelLabel">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="2" name="C:\Users\Pragya\Desktop\icons\cancel_30px.png"/>
@@ -1970,10 +1974,10 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel29MouseClicked"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="exitDefaultPanelLabelMouseClicked"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="home">
+        <Component class="javax.swing.JLabel" name="homeDefaultPanelLabel">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="2" name="C:\Users\Pragya\Desktop\icons\home_32px.png"/>
@@ -1983,10 +1987,10 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="homeMouseClicked"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="homeDefaultPanelLabelMouseClicked"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="minimizeDefaultPanelLabel">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="2" name="C:\Users\Pragya\Desktop\icons\minimize_window_24px.png"/>
@@ -1996,7 +2000,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel1MouseClicked"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="minimizeDefaultPanelLabelMouseClicked"/>
           </Events>
         </Component>
       </SubComponents>
