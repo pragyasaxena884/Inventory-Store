@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.capsys.Inventory.pojo;
+package com.capsys.InventoryStore.pojo;
 
 /**
  *
@@ -25,7 +25,8 @@ public class ModifyProductDetails
     /**
      * @param productIdModifyDetails the productIdModifyDetails to set
      */
-    public void setProductIdModifyDetails(long productIdModifyDetails) {
+    public void setProductIdModifyDetails(long productIdModifyDetails) 
+    {
         this.productIdModifyDetails = productIdModifyDetails;
     }
 

@@ -53,7 +53,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="DefaultPanel" min="-2" pref="459" max="-2" attributes="0"/>
+          <Component id="DefaultPanel" min="-2" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -76,7 +76,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="layeredPane" max="32767" attributes="0"/>
+                      <Component id="layeredPane" pref="459" max="32767" attributes="0"/>
                       <Group type="102" attributes="0">
                           <Component id="homeDefaultPanelLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
@@ -253,14 +253,14 @@
                 <Component class="javax.swing.JLabel" name="passwordImageLabel">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Users\Pragya\Desktop\icons\password_32px.png"/>
+                      <Image iconType="3" name="/com/capsys/InventoryStore/Resources/Icons/password_32px.png"/>
                     </Property>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="usernameImageLabel">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Users\Pragya\Desktop\icons\administrator_male_26px.png"/>
+                      <Image iconType="3" name="/com/capsys/InventoryStore/Resources/Icons/administrator_male_26px.png"/>
                     </Property>
                   </Properties>
                 </Component>
@@ -1026,9 +1026,6 @@
                       </Border>
                     </Property>
                   </Properties>
-                  <Events>
-                    <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="productNameAddNewProductTextFieldFocusLost"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="quantityAddNewProductTextField">
                   <Properties>
@@ -1176,9 +1173,6 @@
                       </Border>
                     </Property>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="productIdDeleteProductTextFieldActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="deleteProductButton">
                   <Properties>
@@ -1342,9 +1336,6 @@
                       </Border>
                     </Property>
                   </Properties>
-                  <Events>
-                    <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="productNameModifyProductTextFieldFocusLost"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="costPerUnitModifyProductTextField">
                   <Properties>
@@ -1357,9 +1348,6 @@
                       </Border>
                     </Property>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="costPerUnitModifyProductTextFieldActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="modifyProductButton">
                   <Properties>
@@ -1967,7 +1955,7 @@
         <Component class="javax.swing.JLabel" name="exitDefaultPanelLabel">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Pragya\Desktop\icons\cancel_30px.png"/>
+              <Image iconType="3" name="/com/capsys/InventoryStore/Resources/Icons/cancel_30px.png"/>
             </Property>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Hand Cursor"/>
@@ -1980,7 +1968,7 @@
         <Component class="javax.swing.JLabel" name="homeDefaultPanelLabel">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Pragya\Desktop\icons\home_32px.png"/>
+              <Image iconType="3" name="/com/capsys/InventoryStore/Resources/Icons/home_32px.png"/>
             </Property>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Hand Cursor"/>
@@ -1993,7 +1981,7 @@
         <Component class="javax.swing.JLabel" name="minimizeDefaultPanelLabel">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Pragya\Desktop\icons\minimize_window_24px.png"/>
+              <Image iconType="3" name="/com/capsys/InventoryStore/Resources/Icons/minimize_window_24px.png"/>
             </Property>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Hand Cursor"/>

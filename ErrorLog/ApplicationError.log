@@ -1,0 +1,4 @@
+Dec 03, 2019 12:34:47 PM com.capsys.InventoryStore.Sql.MainFrameSql selectExistedProductId
+SEVERE: null
+Dec 03, 2019 12:34:51 PM com.capsys.InventoryStore.Sql.MainFrameSql insertAddNewProductDetails
+SEVERE: null

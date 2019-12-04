@@ -3,7 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.capsys.Inventory.pojo;
+package com.capsys.InventoryStore.pojo;
+
+
 
 /**
  *
@@ -12,11 +14,11 @@ package com.capsys.Inventory.pojo;
 
 public class AddNewProductDetails 
 {
-    private long productIdAddProduct;
-    private String productNameAddProduct;
-    private float costPerUnitAddProduct;
-    private int quantityOfProductAddProduct;
-    
+    private  long productIdAddProduct;
+    private  String productNameAddProduct;
+    private  float costPerUnitAddProduct;
+    private  int quantityOfProductAddProduct;
+    private boolean flag;
 
     /**
      * @return the productIdAddProduct
@@ -29,21 +31,24 @@ public class AddNewProductDetails
     /**
      * @param productIdAddProduct the productIdAddProduct to set
      */
-    public void setProductIdAddProduct(long productIdAddProduct) {
+    public void setProductIdAddProduct(long productIdAddProduct) 
+    {
         this.productIdAddProduct = productIdAddProduct;
     }
 
     /**
      * @return the productNameAddProduct
      */
-    public String getProductNameAddProduct() {
-        return productNameAddProduct;
+    public String getProductNameAddProduct() 
+    {
+        return this.productNameAddProduct;
     }
 
     /**
      * @param productNameAddProduct the productNameAddProduct to set
      */
-    public void setProductNameAddProduct(String productNameAddProduct) {
+    public void setProductNameAddProduct(String productNameAddProduct) 
+    {
         this.productNameAddProduct = productNameAddProduct;
     }
 
@@ -89,6 +94,22 @@ public class AddNewProductDetails
         java.util.Date today=new java.util.Date();
         return new java.sql.Date(today.getTime());
     }
-    
-    
+
+    /**
+     * @return the flag
+     */
+    public boolean isFlag() 
+    {
+        System.out.println("flag get:"+flag);
+        return flag;
+    }
+
+    /**
+     * @param flag the flag to set
+     */
+    public void setFlag(boolean flag) 
+    {
+        this.flag = flag;
+        System.out.println("flag set:"+flag);
+    }
 }

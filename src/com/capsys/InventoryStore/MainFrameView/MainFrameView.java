@@ -1,36 +1,39 @@
 package com.capsys.InventoryStore.MainFrameView;
 import com.capsys.InventoryStore.Utility.MainFrameValidation;
-import com.capsys.Inventory.pojo.AddNewProductDetails;
-import com.capsys.Inventory.pojo.DeleteProductDetails;
-import com.capsys.Inventory.pojo.ManageProductQuantity;
-import com.capsys.Inventory.pojo.ModifyProductDetails;
-import com.capsys.Inventory.pojo.ProductReporting;
+import com.capsys.InventoryStore.pojo.AddNewProductDetails;
+import com.capsys.InventoryStore.pojo.DeleteProductDetails;
+import com.capsys.InventoryStore.pojo.ManageProductQuantity;
+import com.capsys.InventoryStore.pojo.ModifyProductDetails;
+import com.capsys.InventoryStore.pojo.ProductReporting;
 import com.capsys.InventoryStore.Sql.MainFrameSql;
 import java.awt.Color;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 /**
-*@author Pragya Saxena
-* @version 
-* 
+* @author Pragya Saxena
+* @version 1.0
 * Window for application to make entry of Inventory
 **/
 public class MainFrameView extends javax.swing.JFrame 
 {
-    public int posX;
-    public int posY;   
+    private static int POSX;
+    private static int POSY;   
     boolean flag=true;
-    int available_stock=0;
     AddNewProductDetails addProduct=new AddNewProductDetails();
     DeleteProductDetails deleteProduct=new DeleteProductDetails();
     ModifyProductDetails modifyProduct=new ModifyProductDetails();
     ManageProductQuantity manageProductQuantity=new ManageProductQuantity();
     ProductReporting productReporting=new ProductReporting();
     MainFrameSql mainFrameSql=new MainFrameSql();
-    
+    MainFrameValidation mainFrameValidation=new MainFrameValidation();
+    JTextField[] textField;
+            
     
     public MainFrameView() 
     {
@@ -227,9 +230,9 @@ public class MainFrameView extends javax.swing.JFrame
         inventoryStoreLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         inventoryStoreLabel.setText("Inventory Store");
 
-        passwordImageLabel.setIcon(new javax.swing.ImageIcon("C:\\Users\\Pragya\\Desktop\\icons\\password_32px.png")); // NOI18N
+        passwordImageLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/capsys/InventoryStore/Resources/Icons/password_32px.png"))); // NOI18N
 
-        usernameImageLabel.setIcon(new javax.swing.ImageIcon("C:\\Users\\Pragya\\Desktop\\icons\\administrator_male_26px.png")); // NOI18N
+        usernameImageLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/capsys/InventoryStore/Resources/Icons/administrator_male_26px.png"))); // NOI18N
 
         authorizationLabel.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 18)); // NOI18N
         authorizationLabel.setForeground(new java.awt.Color(255, 255, 255));
@@ -678,11 +681,6 @@ public class MainFrameView extends javax.swing.JFrame
         productNameAddNewProductTextField.setBackground(new java.awt.Color(35, 144, 173));
         productNameAddNewProductTextField.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         productNameAddNewProductTextField.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
-        productNameAddNewProductTextField.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                productNameAddNewProductTextFieldFocusLost(evt);
-            }
-        });
 
         quantityAddNewProductTextField.setBackground(new java.awt.Color(35, 144, 173));
         quantityAddNewProductTextField.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
@@ -776,11 +774,6 @@ public class MainFrameView extends javax.swing.JFrame
 
         productIdDeleteProductTextField.setBackground(new java.awt.Color(35, 144, 173));
         productIdDeleteProductTextField.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
-        productIdDeleteProductTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                productIdDeleteProductTextFieldActionPerformed(evt);
-            }
-        });
 
         deleteProductButton.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 18)); // NOI18N
         deleteProductButton.setText("Delete Product");
@@ -860,19 +853,9 @@ public class MainFrameView extends javax.swing.JFrame
 
         productNameModifyProductTextField.setBackground(new java.awt.Color(35, 144, 173));
         productNameModifyProductTextField.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
-        productNameModifyProductTextField.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                productNameModifyProductTextFieldFocusLost(evt);
-            }
-        });
 
         costPerUnitModifyProductTextField.setBackground(new java.awt.Color(35, 144, 173));
         costPerUnitModifyProductTextField.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
-        costPerUnitModifyProductTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                costPerUnitModifyProductTextFieldActionPerformed(evt);
-            }
-        });
 
         modifyProductButton.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 18)); // NOI18N
         modifyProductButton.setText("Modify Product");
@@ -1251,7 +1234,7 @@ public class MainFrameView extends javax.swing.JFrame
 
         layeredPane.add(reportTablePanel, "card13");
 
-        exitDefaultPanelLabel.setIcon(new javax.swing.ImageIcon("C:\\Users\\Pragya\\Desktop\\icons\\cancel_30px.png")); // NOI18N
+        exitDefaultPanelLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/capsys/InventoryStore/Resources/Icons/cancel_30px.png"))); // NOI18N
         exitDefaultPanelLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         exitDefaultPanelLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1259,7 +1242,7 @@ public class MainFrameView extends javax.swing.JFrame
             }
         });
 
-        homeDefaultPanelLabel.setIcon(new javax.swing.ImageIcon("C:\\Users\\Pragya\\Desktop\\icons\\home_32px.png")); // NOI18N
+        homeDefaultPanelLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/capsys/InventoryStore/Resources/Icons/home_32px.png"))); // NOI18N
         homeDefaultPanelLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         homeDefaultPanelLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1267,7 +1250,7 @@ public class MainFrameView extends javax.swing.JFrame
             }
         });
 
-        minimizeDefaultPanelLabel.setIcon(new javax.swing.ImageIcon("C:\\Users\\Pragya\\Desktop\\icons\\minimize_window_24px.png")); // NOI18N
+        minimizeDefaultPanelLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/capsys/InventoryStore/Resources/Icons/minimize_window_24px.png"))); // NOI18N
         minimizeDefaultPanelLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         minimizeDefaultPanelLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1282,7 +1265,7 @@ public class MainFrameView extends javax.swing.JFrame
             .addGroup(DefaultPanelLayout.createSequentialGroup()
                 .addGap(0, 0, 0)
                 .addGroup(DefaultPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(layeredPane)
+                    .addComponent(layeredPane, javax.swing.GroupLayout.DEFAULT_SIZE, 459, Short.MAX_VALUE)
                     .addGroup(DefaultPanelLayout.createSequentialGroup()
                         .addComponent(homeDefaultPanelLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1306,7 +1289,7 @@ public class MainFrameView extends javax.swing.JFrame
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(DefaultPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 459, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(DefaultPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1376,80 +1359,145 @@ public class MainFrameView extends javax.swing.JFrame
     private void overallReportButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_overallReportButtonActionPerformed
        switchPanel(overallReportPanel);
     }//GEN-LAST:event_overallReportButtonActionPerformed
-
+    
     private void addNewProductButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNewProductButtonActionPerformed
+      textField=new JTextField[]{productIdAddNewProductTextField,productNameAddNewProductTextField,costPerUnitAddNewProductTextField,quantityAddNewProductTextField};
+      if(mainFrameSql.selectExistedProductId(Long.parseLong(productIdAddNewProductTextField.getText()))==false)
+      {  
+      if(mainFrameValidation.validateProductId(productIdAddNewProductTextField.getText()))
+      {
        addProduct.setProductIdAddProduct(Long.parseLong(productIdAddNewProductTextField.getText()));
        addProduct.setProductNameAddProduct(productNameAddNewProductTextField.getText());
        addProduct.setCostPerUnitAddProduct(Float.parseFloat(costPerUnitAddNewProductTextField.getText()));
        addProduct.setQuantityOfProductAddProduct(Integer.parseInt(quantityAddNewProductTextField.getText()));
-       if((mainFrameSql.insertAddNewProductDetails())>0)
-       {
-           MainFrameValidation.promptSuccessMessage(addProductPanel,"Product Added Successfully");
-       }
+            if((mainFrameSql.insertAddNewProductDetails(addProduct,addProductPanel))>0)
+            {
+                mainFrameValidation.promptConfirmMessageAddProduct(addProductPanel,"Product Added Successfully\nDo you want to add more products?",textField);
+            }
+            else
+            {
+                mainFrameValidation.promptSuccessMessage(addProductPanel, "Product does not added",textField);
+            }
+      }
+      else
+      {
+            mainFrameValidation.promptSuccessMessage(addProductPanel, "Enter 10-digit product id",textField);
+      }  
+      }
+      else
+      {
+          mainFrameValidation.promptSuccessMessage(addProductPanel, "Product Id already exists in the database",textField);
+      }
+      
     }//GEN-LAST:event_addNewProductButtonActionPerformed
 
     private void generateMonthlyReportButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generateMonthlyReportButtonActionPerformed
+        textField=new JTextField[]{productIdMonthlyReportTextField};
         productReporting.setProductIdProductReporting(Long.parseLong(productIdMonthlyReportTextField.getText()));
-        if(mainFrameSql.selectMonthlyReport(reportTable)>0)
+        if(mainFrameSql.selectExistedProductId(Long.parseLong(productIdMonthlyReportTextField.getText())))
+        { 
+        if(mainFrameSql.selectMonthlyReport(reportTable,addProduct,productReporting)>0)
         {
+            displayMessageReportTableLabel.setText(Integer.toString(productReporting.getAvailableStock()));
             switchPanel(reportTablePanel);
         }
         else
         {
-            MainFrameValidation.promptSuccessMessage(monthlyReportPanel, "No report exist for the product id in the database");
+            mainFrameValidation.promptSuccessMessage(monthlyReportPanel, "No report exist for the product id in the database",textField);
         }  
-        switchPanel(reportTablePanel);
+        }
+        else
+        {
+             mainFrameValidation.promptSuccessMessage(monthlyReportPanel, "Product Id does not exist",textField);
+        }
     }//GEN-LAST:event_generateMonthlyReportButtonActionPerformed
 
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
-        if("admin".equals(usernameTextField.getText())&& "pass".equals(passwordTextField.getText()))
+        if("admin@gmail.com".equals(usernameTextField.getText())&& "pass".equals(passwordTextField.getText()))
         {switchPanel(welcomePanel);}
         else
         {JOptionPane.showMessageDialog(loginPanel,"Username and password mismatch");}  
     }//GEN-LAST:event_loginButtonActionPerformed
 
     private void generateOverallReportButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generateOverallReportButtonActionPerformed
+        textField=new JTextField[]{productIdOverallReportTextField};
         productReporting.setProductIdProductReporting(Long.parseLong(productIdOverallReportTextField.getText()));
-        if(mainFrameSql.selectOverallReport(reportTable)>0)
-        {
-            switchPanel(reportTablePanel);
+        if(mainFrameSql.selectExistedProductId(Long.parseLong(productIdOverallReportTextField.getText())))
+        {    
+            try 
+            {
+                if(mainFrameSql.selectOverallReport(reportTable,productReporting)>0)
+                {
+                    displayMessageReportTableLabel.setText(Integer.toString(productReporting.getAvailableStock()));
+                    switchPanel(reportTablePanel);
+                }
+                else
+                {
+                    mainFrameValidation.promptSuccessMessage(overallReportPanel, "No report exist for the product id in the database",textField);
+                }   
+            } 
+            catch (SQLException ex) 
+            {
+                Logger.getLogger(MainFrameView.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
         else
         {
-            MainFrameValidation.promptSuccessMessage(overallReportPanel, "No report exist for the product id in the database");
+             mainFrameValidation.promptSuccessMessage(overallReportPanel, "Product Id does not exist in the database",textField);
         }
     }//GEN-LAST:event_generateOverallReportButtonActionPerformed
 
     private void deleteProductButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteProductButtonActionPerformed
+        textField=new JTextField[]{productIdDeleteProductTextField};
         deleteProduct.setProductIdDeleteProduct(Long.parseLong(productIdDeleteProductTextField.getText()));
-        if((mainFrameSql.deleteProductDetails())>0)
+        if(mainFrameSql.selectExistedProductId(Long.parseLong(productIdDeleteProductTextField.getText())))
         {
-            MainFrameValidation.promptSuccessMessage(deletelProductPanel, "Product Deleted Successfully");
+        boolean confirmMessage=mainFrameValidation.promptConfirmMessageDeleteProduct(deletelProductPanel, "Are you sure?",textField);
+        if(confirmMessage==true)
+        {
+            mainFrameSql.deleteProductDetails(deleteProduct);
+            mainFrameValidation.promptSuccessMessage(deletelProductPanel, "Product deleted",textField);
+        }
+        else if(confirmMessage==false)
+        {
+            mainFrameValidation.promptSuccessMessage(deletelProductPanel, "Product not deleted",textField);
+        }
+        }
+        else
+        {
+            mainFrameValidation.promptSuccessMessage(deletelProductPanel, "Product Id does not exist in the database",textField);
         }
     }//GEN-LAST:event_deleteProductButtonActionPerformed
 
     private void modifyProductButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modifyProductButtonActionPerformed
-        modifyProduct.setProductIdModifyDetails(Long.parseLong(productIdModifyProductTextField.getText()));
+        textField=new JTextField[]{productNameModifyProductTextField,costPerUnitModifyProductTextField,productIdModifyProductTextField};
         modifyProduct.setProductNameModifyDetails(productNameModifyProductTextField.getText());
         modifyProduct.setCostPerUnitModifyDetails(Float.parseFloat(costPerUnitModifyProductTextField.getText()));
-        if((mainFrameSql.modifyProductDetails())>0)
+        modifyProduct.setProductIdModifyDetails(Long.parseLong(productIdModifyProductTextField.getText()));
+        boolean confirmMessage=mainFrameValidation.promptConfirmMessageModifyProduct(modifyProductPanel, "Are you sure?",textField);
+        if(confirmMessage==true)
         {
-            MainFrameValidation.promptSuccessMessage(modifyProductPanel, "Product Updated Successfully");
+            mainFrameSql.modifyProductDetails(modifyProduct);
+            mainFrameValidation.promptSuccessMessage(modifyProductPanel, "Product Updated Successfully",textField);
+        }
+        else
+        {
+            mainFrameValidation.promptSuccessMessage(modifyProductPanel, "Product not updated",textField);
+            productIdModifyProductTextField.setEditable(true);
         }
     }//GEN-LAST:event_modifyProductButtonActionPerformed
 
     private void homeDefaultPanelLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeDefaultPanelLabelMouseClicked
-        switchPanel(welcomePanel);
-        
+        switchPanel(welcomePanel);    
     }//GEN-LAST:event_homeDefaultPanelLabelMouseClicked
 
     private void formMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMousePressed
-        posX = evt.getX();
-        posY = evt.getY();
+        POSX = evt.getX();
+        POSY = evt.getY();
     }//GEN-LAST:event_formMousePressed
 
     private void formMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseDragged
-        setLocation(evt.getXOnScreen()-posX,evt.getYOnScreen()-posY);
+        setLocation(evt.getXOnScreen()-POSX,evt.getYOnScreen()-POSY);
     }//GEN-LAST:event_formMouseDragged
 
     private void usernameTextFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_usernameTextFieldFocusLost
@@ -1459,7 +1507,8 @@ public class MainFrameView extends javax.swing.JFrame
 
     private void passwordTextFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordTextFieldFocusLost
         if(passwordTextField.getText().isEmpty())
-        {   passwordTextField.setEchoChar((char)0);
+        {   
+            passwordTextField.setEchoChar((char)0);
             passwordTextField.setText("Enter Password");   
         }
     }//GEN-LAST:event_passwordTextFieldFocusLost
@@ -1476,46 +1525,60 @@ public class MainFrameView extends javax.swing.JFrame
     }//GEN-LAST:event_backProductQuantityButtonActionPerformed
 
     private void generateReportDateBasedButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generateReportDateBasedButtonActionPerformed
+        textField=new JTextField[]{productIdReportDateBasedTextField};
         productReporting.setProductIdProductReporting(Long.parseLong(productIdReportDateBasedTextField.getText()));
         productReporting.setStartDateProductReporting(new java.sql.Date(startDateChooser.getDate().getTime()));
         productReporting.setEndDateProductReporting(new java.sql.Date(endDateChooser.getDate().getTime()));
-        if(mainFrameSql.selectDateBasedReport(reportTable)>0)
+        if(mainFrameSql.selectExistedProductId(Long.parseLong(productIdReportDateBasedTextField.getText())))
+        { 
+        if(mainFrameSql.selectDateBasedReport(reportTable,productReporting)>0)
         {
+            displayMessageReportTableLabel.setText(Integer.toString(productReporting.getAvailableStock()));
             switchPanel(reportTablePanel);
+        }
+        else
+        {
+            mainFrameValidation.promptSuccessMessage(overallReportPanel, "No report exist for the product id in the database",textField);
+        }
+        }
+        else
+        {
+            mainFrameValidation.promptSuccessMessage(overallReportPanel, "Product Id does not exist",textField);
         }
         
     }//GEN-LAST:event_generateReportDateBasedButtonActionPerformed
 
     private void addQuantityButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addQuantityButtonActionPerformed
+        textField=new JTextField[]{productIdQuantityTextField,productQuantityTextField};
         manageProductQuantity.setProductIdManageQuantity(Long.parseLong(productIdQuantityTextField.getText()));
         manageProductQuantity.setQuantityManageProduct(Integer.parseInt(productQuantityTextField.getText()));
-        if((mainFrameSql.insertAddQuantityDetails())>0)
+        if((mainFrameSql.insertAddQuantityDetails(addProduct,manageProductQuantity))>0)
         {
-            MainFrameValidation.promptSuccessMessage(productQuantityPanel, "Quantity Added Successfully");
+            mainFrameValidation.promptSuccessMessage(productQuantityPanel, "Quantity Added Successfully",textField);
+            mainFrameValidation.promptConfirmMessage(productQuantityPanel, "Quantity Added Successfully\nDo you want to continue with the same product ",textField);
         }
     }//GEN-LAST:event_addQuantityButtonActionPerformed
 
     private void productIdQuantityTextFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_productIdQuantityTextFieldFocusLost
-        MainFrameValidation val=new MainFrameValidation();
+        textField=new JTextField[]{productIdQuantityTextField};
         if(mainFrameSql.selectExistedProductId(Long.parseLong(productIdQuantityTextField.getText()))==false)
         {
-            displayMessageProductQuantityLabel.setText("Product_Id not exist");
+            mainFrameValidation.promptSuccessMessage(productQuantityPanel, "Product Id does not exist",textField);
             addQuantityButton.setEnabled(false);
         }
         else
         {
-            displayMessageProductQuantityLabel.setText(" ");
             addQuantityButton.setEnabled(true);   
         }
-        
     }//GEN-LAST:event_productIdQuantityTextFieldFocusLost
 
     private void removeQuantityButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeQuantityButtonActionPerformed
+        textField=new JTextField[]{productIdQuantityTextField,productQuantityTextField};
         manageProductQuantity.setProductIdManageQuantity(Long.parseLong(productIdQuantityTextField.getText()));
         manageProductQuantity.setQuantityManageProduct(Integer.parseInt(productQuantityTextField.getText()));
-        if((mainFrameSql.insertRemoveQuantityDetails())>0)
+        if((mainFrameSql.insertRemoveQuantityDetails(productReporting,addProduct,manageProductQuantity))>0)
         {
-            MainFrameValidation.promptSuccessMessage(productQuantityPanel, "Quantity Removed Successfully");
+            mainFrameValidation.promptSuccessMessage(productQuantityPanel, "Quantity Removed Successfully",textField);
         }
     }//GEN-LAST:event_removeQuantityButtonActionPerformed
 
@@ -1535,11 +1598,8 @@ public class MainFrameView extends javax.swing.JFrame
         JOptionPane.showMessageDialog(loginPanel,"Contact the administrator");
     }//GEN-LAST:event_forgotPasswordLabelMouseClicked
 
-    private void productIdDeleteProductTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productIdDeleteProductTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_productIdDeleteProductTextFieldActionPerformed
-
     private void backReportDateBasedButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backReportDateBasedButtonActionPerformed
+        productIdReportDateBasedTextField.setText("");
         switchPanel(productReportingPanel);
     }//GEN-LAST:event_backReportDateBasedButtonActionPerformed
 
@@ -1547,21 +1607,20 @@ public class MainFrameView extends javax.swing.JFrame
         switchPanel(welcomePanel);
     }//GEN-LAST:event_backProductReportingLabelActionPerformed
 
-    private void costPerUnitModifyProductTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_costPerUnitModifyProductTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_costPerUnitModifyProductTextFieldActionPerformed
-
     private void productIdModifyProductTextFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_productIdModifyProductTextFieldFocusLost
-        if(mainFrameSql.selectExistedProductId(Long.parseLong(productIdModifyProductTextField.getText()))==false)
+        textField=new JTextField[]{productIdModifyProductTextField};
+        if(mainFrameSql.selectExistedProductId(Long.parseLong(productIdModifyProductTextField.getText())))
         {
-           displayMessageModifyProductLabel.setText("Product ID does not exist");
-           productIdModifyProductTextField.setText("");
-           modifyProductButton.setEnabled(false);
+        modifyProduct.setProductIdModifyDetails(Long.parseLong(productIdModifyProductTextField.getText()));
+        mainFrameSql.selectProductDetails(modifyProduct);
+        productNameModifyProductTextField.setText(modifyProduct.getProductNameModifyDetails());
+        costPerUnitModifyProductTextField.setText(Float.toString(modifyProduct.getCostPerUnitModifyDetails()));
+        productIdModifyProductTextField.setEditable(false);
         }
         else
         {
-            displayMessageModifyProductLabel.setText("");
-            modifyProductButton.setEnabled(true);
+        mainFrameValidation.promptSuccessMessage(modifyProductPanel, "Product Id does not exist",textField);
+        productIdModifyProductTextField.setEditable(true);
         }
     }//GEN-LAST:event_productIdModifyProductTextFieldFocusLost
 
@@ -1570,48 +1629,32 @@ public class MainFrameView extends javax.swing.JFrame
     }//GEN-LAST:event_backProductDetailsButtonActionPerformed
 
     private void backAddNewProductButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backAddNewProductButtonActionPerformed
-        switchPanel(productDetailsPanel);
-        
+        productIdAddNewProductTextField.setText("");
+        productNameAddNewProductTextField.setText("");
+        costPerUnitAddNewProductTextField.setText("");
+        quantityAddNewProductTextField.setText("");
+        switchPanel(productDetailsPanel);     
     }//GEN-LAST:event_backAddNewProductButtonActionPerformed
 
-    private void productNameModifyProductTextFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_productNameModifyProductTextFieldFocusLost
-        if(productNameModifyProductTextField.getText().isEmpty())
-        {
-            JOptionPane.showMessageDialog(modifyProductPanel, "One or field is empty");
-            modifyProductButton.setEnabled(false);
-        }
-        else
-        {
-            modifyProductButton.setEnabled(true);
-        }
-    }//GEN-LAST:event_productNameModifyProductTextFieldFocusLost
-
-    private void productNameAddNewProductTextFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_productNameAddNewProductTextFieldFocusLost
-        if(productNameAddNewProductTextField.getText().isEmpty())
-        {
-            JOptionPane.showMessageDialog(addProductPanel, "One or field is empty");
-            addNewProductButton.setEnabled(false);
-        }
-        else
-        {
-            addNewProductButton.setEnabled(true);
-        }
-     
-    }//GEN-LAST:event_productNameAddNewProductTextFieldFocusLost
-
     private void backDeleteProductButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backDeleteProductButtonActionPerformed
+        productIdDeleteProductTextField.setText("");
         switchPanel(productDetailsPanel);
     }//GEN-LAST:event_backDeleteProductButtonActionPerformed
 
     private void backModifyProductButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backModifyProductButtonActionPerformed
+        productIdModifyProductTextField.setText("");
+        productNameModifyProductTextField.setText("");
+        costPerUnitModifyProductTextField.setText("");
         switchPanel(productDetailsPanel);
     }//GEN-LAST:event_backModifyProductButtonActionPerformed
 
     private void backOverallReportButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backOverallReportButtonActionPerformed
+        productIdOverallReportTextField.setText("");
         switchPanel(productReportingPanel);
     }//GEN-LAST:event_backOverallReportButtonActionPerformed
 
     private void backMonthyReportButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backMonthyReportButtonActionPerformed
+        productIdMonthlyReportTextField.setText("");
         switchPanel(productReportingPanel);
     }//GEN-LAST:event_backMonthyReportButtonActionPerformed
 

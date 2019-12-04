@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.capsys.Inventory.pojo;
+package com.capsys.InventoryStore.pojo;
 import java.sql.Date;
 import java.time.LocalDate;
 
@@ -16,10 +16,29 @@ public class ProductReporting
     private long productIdProductReporting;
     private Date startDateProductReporting;
     private Date endDateProductReporting;
+    private int availableStock;
+    /**
+     * @return the availableStock
+     */
+    public int getAvailableStock()
+    {
+        return availableStock;
+    }
+
+    /**
+     * @param availableStock the availableStock to set
+     */
+    
+    public void setAvailableStock(int availableStock) 
+    {
+        this.availableStock = availableStock;
+    }
+    
     /**
      * @return the startDateProductReporting
      */
-    public Date getStartDateProductReporting() {
+    public Date getStartDateProductReporting() 
+    {
         return startDateProductReporting;
     }
 
@@ -48,19 +67,26 @@ public class ProductReporting
     /**
      * @return the productIdProductReporting
      */
+    
     public long getProductIdProductReporting() 
     {
         return productIdProductReporting;
     }
 
     /**
+     * 
      * @param productIdProductReporting the productIdProductReporting to set
      */
+    
     public void setProductIdProductReporting(long productIdProductReporting) 
     {
         this.productIdProductReporting = productIdProductReporting;
     }
-   
+    
+    /**
+     * Use to return the current month
+     * @return LocalDate
+     */
     
     public LocalDate getMonth() 
     {
@@ -69,6 +95,4 @@ public class ProductReporting
         LocalDate date = currentDate.withDayOfMonth(1);
         return date;
     }
-    
-
 }

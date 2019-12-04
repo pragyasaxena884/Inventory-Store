@@ -3,11 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.capsys.Inventory.pojo;
+package com.capsys.InventoryStore.pojo;
 /**
  *
  * @author Pragya
  */
+
 public class DeleteProductDetails 
 {
     private long productIdDeleteProduct;
